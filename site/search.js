@@ -52,7 +52,8 @@
       for (const c of citations) {
         sourceMap.set(c.url,c.title || c.url);
         if (!Number.isInteger(c.start)||!Number.isInteger(c.end)||c.start<cursor||c.end<=c.start||c.end>part.text.length) continue;
-        text.append(document.createTextNode(part.text.slice(cursor,c.start)),link(part.text.slice(c.start,c.end) || '查看来源',c.url)); cursor=c.end;
+        const citationLabel=part.text.slice(c.start,c.end).replace(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g,'$1');
+        text.append(document.createTextNode(part.text.slice(cursor,c.start)),link(citationLabel || '查看来源',c.url)); cursor=c.end;
       }
       text.append(document.createTextNode(part.text.slice(cursor))); answer.append(text);
     }
