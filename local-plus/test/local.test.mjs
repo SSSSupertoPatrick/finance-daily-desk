@@ -6,8 +6,16 @@ import { protect, ProtectedStore } from '../store.mjs';
 import { mkdtemp, readFile, unlink, rmdir, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { readCompletedStream, searchPlus, plusError } from '../inference.mjs';
+import { fetchConnected } from '../network.mjs';
 
 const hostId = 'urn:uuid:11111111-1111-4111-8111-111111111111';
+test('only pre-connection timeouts retry, never HTTP errors or ambiguous failures',async()=>{
+  let attempts=0;const error=new TypeError('connection not established',{cause:{code:'UND_ERR_CONNECT_TIMEOUT'}});
+  const response=await fetchConnected('https://example.invalid',{},async()=>{attempts++;if(attempts<3)throw error;return new Response('ok');});
+  assert.equal(response.status,200);assert.equal(attempts,3);
+  attempts=0;await fetchConnected('https://example.invalid',{},async()=>{attempts++;return new Response('failed',{status:502});});assert.equal(attempts,1);
+  attempts=0;await assert.rejects(fetchConnected('https://example.invalid',{},async()=>{attempts++;throw new TypeError('interrupted');}));assert.equal(attempts,1);
+});
 const callback = 'http://127.0.0.1:18741/auth/callback';
 test('official login uses PKCE, nonce, exact loopback URI and plan scopes', () => {
   const first = makeAuthorization({ hostId, callback, session: 'session' }); const url = new URL(first.url);
@@ -70,6 +78,17 @@ test('stream parser handles split UTF8/CRLF and only accepts terminal completed 
   await assert.rejects(readCompletedStream(streamResponse([{type:'response.output_text.delta',delta:'partial'}])));
   await assert.rejects(readCompletedStream(streamResponse([{type:'response.incomplete'}])));
   await assert.rejects(readCompletedStream(streamResponse([{type:'response.failed',response:{error:{code:'subscription_sharing_usage_limit_exceeded'}}}])));
+});
+test('plan streams preserve completed items when final envelope omits output',async()=>{
+  const events=completed.output.map((item,output_index)=>({type:'response.output_item.done',output_index,item}));
+  events.push({type:'response.completed',response:{status:'completed',output:[]}});
+  assert.deepEqual((await readCompletedStream(streamResponse(events))).output,completed.output);
+  const deltas=[{type:'response.output_item.added',output_index:0,item:{type:'message',role:'assistant',content:[]}},
+    {type:'response.output_text.delta',output_index:0,content_index:0,delta:'完整'},
+    {type:'response.output_text.delta',output_index:0,content_index:0,delta:'回答'},
+    {type:'response.output_text.annotation.added',output_index:0,content_index:0,annotation:{type:'url_citation',url:'https://www.sse.com.cn/'}},
+    {type:'response.completed',response:{status:'completed',output:[]}}];
+  const data=await readCompletedStream(streamResponse(deltas));assert.equal(data.output[0].content[0].text,'完整回答');assert.equal(data.output[0].content[0].annotations.length,1);
 });
 test('Plus request contract streams without unsupported fields and no API key fallback',async()=>{
   const result=await searchPlus({query:'ETF是什么',model:'account-model',token:'fake-oauth-access',fetchImpl:async(url,options)=>{

@@ -8,7 +8,7 @@ $stateDirectory = Join-Path $PSScriptRoot '.local-state'
 New-Item -ItemType Directory -Path $stateDirectory -Force | Out-Null
 try {
   $response = Invoke-WebRequest -Uri 'http://127.0.0.1:18741/' -TimeoutSec 2
-  if ($response.StatusCode -eq 200 -and $response.Content.Contains('本机 Plus')) { Write-Output '知金台已运行：http://127.0.0.1:18741/'; if ($OpenBrowser) { Start-Process 'http://127.0.0.1:18741/' }; exit 0 }
+  if ($response.StatusCode -eq 200 -and $response.Content.Contains('local-plus.js')) { Write-Output '知金台已运行：http://127.0.0.1:18741/'; if ($OpenBrowser) { Start-Process 'http://127.0.0.1:18741/' }; exit 0 }
 } catch { }
 if (-not (Test-Path -LiteralPath (Join-Path $PSScriptRoot 'node_modules/jose/package.json'))) {
   & $nodePath (Join-Path $PSScriptRoot 'install.mjs')

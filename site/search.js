@@ -1,7 +1,7 @@
 (() => {
   const node = id => document.getElementById(id);
   const box = node('smartSearch');
-  let endpoint = '', controller, generation = 0, localPlus = false;
+  let endpoint = '', controller, generation = 0, localPlus = false, localLaunch = false;
   const groups = [
     ['利率','降息','加息','房贷','存款','借钱','贷款','央行','宽松'],
     ['债券','收益率','借条','久期','债基','利率','降息'],
@@ -65,7 +65,7 @@
     controller?.abort(); const current=++generation;
     node('searchSubmit').disabled=false; node('cancelSearch').hidden=true; box.setAttribute('aria-busy','false');
     localSearch(query); node('aiAnswer').hidden=true; node('aiAnswer').replaceChildren();
-    if (!node('useAI').checked || !endpoint) { node('searchStatus').textContent=endpoint?'已展示站内内容与相关知识。':'已展示站内内容与相关知识；GPT 尚未接通，当前没有联网搜索。'; return; }
+    if (!node('useAI').checked || !endpoint) { node('searchStatus').textContent=localLaunch?'已展示站内内容与相关知识；打开本机 Plus 版可获取 GPT 联网解读。':endpoint?'已展示站内内容与相关知识。':'已展示站内内容与相关知识；GPT 尚未接通，当前没有联网搜索。'; return; }
     const code=node('searchCode').value.trim();
     if (!localPlus && !code) { node('searchStatus').textContent='站内结果已就绪。请填写搜索访问码，再获取 GPT 补充。'; node('searchCode').focus(); return; }
     controller=new AbortController(); const activeController=controller; const timer=setTimeout(()=>activeController.abort(),localPlus?130000:55000);
@@ -86,8 +86,9 @@
   box.querySelectorAll('[data-query]').forEach(button=>button.onclick=()=>{node('smartQuery').value=button.dataset.query;node('smartSearchForm').requestSubmit();});
   node('openSearch').onclick=()=>{box.scrollIntoView({behavior:'smooth'});node('smartQuery').focus({preventScroll:true});};
   fetch('./search-config.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(config=>{
-    if(config.mode==='local-plus' && location.hostname==='127.0.0.1') {localPlus=true;endpoint='/api/search';node('searchAccess').hidden=true;return;}
+    if(config.mode==='local-plus' && location.hostname==='127.0.0.1') {localPlus=true;endpoint='/api/search';node('searchAccess').hidden=true;node('searchStatus').textContent='站内资料可直接搜索；连接 Plus 后可获取联网解读。';return;}
     if(config.mode==='local-launch') {
+      localLaunch=true;
       node('aiState').textContent='GPT 使用你的 Plus · 在本机版中搜索';node('searchAccess').hidden=true;node('useAI').disabled=true;
       const launch=link('打开本机 Plus 版 ↗','http://127.0.0.1:18741/');launch.className='primary';launch.style.cssText='display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none';
       box.querySelector('.search-tools').append(launch);

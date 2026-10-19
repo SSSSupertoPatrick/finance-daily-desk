@@ -12,10 +12,10 @@
 - 官方 OAuth authorization-code + PKCE，随机 state/nonce、单次回调、精确 loopback URI；使用 jose 校验 ID token 的签名、issuer、audience、有效期与 nonce。只在授权了 `chatgpt.tokens.use.direct` 后启用推理。
 - 凭据只留在 `.local-state/account.dpapi`，使用 Windows DPAPI 加密；目录 ACL 仅允许当前 Windows 用户访问。用户配置文件未加载时使用机器范围 DPAPI，并继续强制当前用户独占文件访问。不会回退为明文保存。
 - 凭据、授权码、查询和完整授权 URL 不写日志、不进入 GitHub，不读取 Codex 或浏览器现有账号凭据。刷新轮转串行执行并原子替换。退出尝试官方撤销；未确认撤销时界面说明后续操作。
-- Plus 的模型/工具与套餐用量受账号政策影响。收到流结束事件 `response.completed` 才显示结果。不会回退到付费 API key。额度不足时站内知识仍可使用。
+- Plus 的模型/工具与套餐用量受账号政策影响。累计同一响应流的完整消息、搜索与引用事件，收到 `response.completed` 后才显示结果；兼容结束消息省略正文的情况。不会回退到付费 API key。额度不足时站内知识仍可使用。仅在建立连接前超时时重试，HTTP 错误或回答中途断开不自动重放。
 
 ## 验证
 
-`node --test test/local.test.mjs` 验证 OAuth、身份验证、续期、Windows 加密、模型目录、SSE 完整性、套餐接口格式及引用。实际回答需要用户完成官方授权后单独联调。
+`node --test test/local.test.mjs` 的 12 项检查验证 OAuth、身份验证、续期、Windows 加密、模型目录、SSE 完整性、套餐接口格式及引用。2026-10-19 已完成真实 Plus 账号连接，`gpt-6.1-sol` 联网查询返回上交所官方原文与引用。所有凭据只由本机服务内部消费，不显示于诊断输出。
 
 参考：[注册与登录](https://developers.openai.com/siwc/token-sharing-open-source/sign-in)、[模型与推理](https://developers.openai.com/siwc/token-sharing-open-source/models-and-inference)、[接口限制](https://developers.openai.com/siwc/token-sharing-open-source/preview-limitations)。

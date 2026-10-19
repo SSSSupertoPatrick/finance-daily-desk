@@ -1,5 +1,6 @@
 import { randomBytes, createHash } from 'node:crypto';
 import { createRemoteJWKSet, jwtVerify, customFetch } from 'jose';
+import { fetchConnected } from './network.mjs';
 
 const ISSUER = 'https://auth.openai.com';
 const RESOURCE = 'https://api.openai.com/v1';
@@ -28,7 +29,7 @@ export function validateCallback(params, pending, session, now = Date.now()) {
 }
 
 export class ChatGPTAuth {
-  constructor({ store, hostId, callback, fetchImpl = fetch, now = Date.now }) {
+  constructor({ store, hostId, callback, fetchImpl = fetchConnected, now = Date.now }) {
     Object.assign(this, { store, hostId, callback, fetchImpl, now });
     this.jwks = createRemoteJWKSet(new URL(`${ISSUER}/.well-known/jwks.json`), { timeoutDuration: 20000, [customFetch]: async (url, options) => {
       for (let attempt = 0; attempt < 2; attempt++) {

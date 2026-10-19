@@ -1,9 +1,11 @@
 import { extractAnswer, collectSources } from '../backend/lib/search.mjs';
+import { fetchConnected } from './network.mjs';
 
-export async function readCompletedStream(response) {
+export async function readCompletedStream(response, onEvent = () => {}) {
   if (!response.body) throw Error('ChatGPT 未返回回答。');
   let buffer = '', size = 0, completed;
   const decoder = new TextDecoder();
+  const items = new Map();
   for await (const chunk of response.body) {
     size += chunk.length; if (size > 4 * 1024 * 1024) throw Error('回答过长，请缩小问题范围。');
     buffer += decoder.decode(chunk, { stream: true });
@@ -14,6 +16,20 @@ export async function readCompletedStream(response) {
       const payload = block.split('\n').filter(l => l.startsWith('data:')).map(l => l.slice(5).trimStart()).join('\n');
       if (!payload || payload === '[DONE]') continue;
       const event = JSON.parse(payload);
+      onEvent(event);
+      if (event.type === 'response.output_item.added' || event.type === 'response.output_item.done') items.set(event.output_index, event.item);
+      if (event.type === 'response.content_part.added' || event.type === 'response.content_part.done') {
+        const item = items.get(event.output_index);
+        if (item) { item.content ||= []; item.content[event.content_index] = event.part; }
+      }
+      if (event.type === 'response.output_text.delta' || event.type === 'response.output_text.done' || event.type === 'response.output_text.annotation.added') {
+        let item = items.get(event.output_index);
+        if (!item) { item = { type: 'message', role: 'assistant', content: [] }; items.set(event.output_index, item); }
+        item.content ||= []; const part = item.content[event.content_index] ||= { type: 'output_text', text: '', annotations: [] };
+        if (event.type.endsWith('.delta')) part.text = (part.text || '') + event.delta;
+        else if (event.type.endsWith('.done')) part.text = event.text;
+        else { part.annotations ||= []; part.annotations.push(event.annotation); }
+      }
       if (event.type === 'response.failed' || event.type === 'error') {
         const error = new Error('ChatGPT 未完成本次回答。'); error.code = event.response?.error?.code || event.code; throw error;
       }
@@ -22,6 +38,9 @@ export async function readCompletedStream(response) {
     }
   }
   if (!completed || completed.status !== 'completed') throw Error('连接中断，回答尚未完成，请重试。');
+  // ChatGPT plan streams may omit output from the terminal envelope. Completed
+  // output items earlier in the same stream remain the authoritative answer.
+  if (!completed.output?.length) completed.output = [...items].sort(([a], [b]) => a - b).map(([, item]) => item);
   return completed;
 }
 
@@ -33,7 +52,7 @@ export function plusError(error) {
   return error.message && !/fetch|JSON|Unexpected|jwt|JWK|token|claim|signature/i.test(error.message) ? error.message : '本机服务暂时无法完成请求，请稍后重试或重新登录。';
 }
 
-export async function searchPlus({ query, model, token, fetchImpl = fetch, signal = AbortSignal.timeout(120000) }) {
+export async function searchPlus({ query, model, token, fetchImpl = fetchConnected, signal = AbortSignal.timeout(120000) }) {
   const date = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' });
   const response = await fetchImpl('https://api.openai.com/v1/responses', {
     method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', Accept: 'text/event-stream' }, signal,
