@@ -1,0 +1,3 @@
+{
+  "functions": { "api/search.mjs": { "maxDuration": 60 } }
+}

@@ -2,6 +2,11 @@
 
 静态站点，包含金融基础知识卡、搜索、本机收藏和金融简报。
 
+## 搜索与知识补充
+首页新增问题搜索，匹配现有概念及本期简报，同时补充相关生活类比、原理与误区。
+GPT 后端代码位于 `backend/`，使用 OpenAI Responses API 和联网搜索，详见该目录 README。
+目前尚未配置 API 密钥或部署后端，线上只启用站内搜索，不会伪装成 GPT 回答。完成后端联调后再设置 `site/search-config.json` 的 endpoint。密钥和访问码不得提交到仓库。
+
 ## 发布
 网站：https://ssssupertopatrick.github.io/finance-daily-desk/
 仓库：https://github.com/SSSSupertoPatrick/finance-daily-desk
