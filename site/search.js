@@ -63,6 +63,7 @@
     event.preventDefault();
     const query = node('smartQuery').value.trim(); if (query.length<2 || query.length>300) { node('searchStatus').textContent='请输入 2–300 个字符。'; return; }
     controller?.abort(); const current=++generation;
+    node('searchSubmit').disabled=false; node('cancelSearch').hidden=true; box.setAttribute('aria-busy','false');
     localSearch(query); node('aiAnswer').hidden=true;
     if (!node('useAI').checked || !endpoint) { node('searchStatus').textContent=endpoint?'已展示站内内容与相关知识。':'已展示站内内容与相关知识；GPT 尚未接通，当前没有联网搜索。'; return; }
     const code=node('searchCode').value.trim();
