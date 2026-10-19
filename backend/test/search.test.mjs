@@ -10,6 +10,16 @@ const concept={name:'利率',sentence:'钱的价格。',analogy:'像租金。',m
 const answer={answer:'利率影响债券价格。',answer_sources:['S1'],concepts:[concept,{...concept,name:'债券'}],limitations:'其他条件不变时。',followups:['票息是什么？','久期是什么？']};
 const synthesis=value=>({status:'completed',output:[{type:'message',role:'assistant',content:[{type:'output_text',text:JSON.stringify(value)}]}]});
 const success=async(url,options)=>Response.json(JSON.parse(options.body).tools?result:synthesis(answer));
+test('unsupported domain filtering retries only the rejected request and keeps source validation',async()=>{
+  let calls=0;
+  const h=createHandler({env,fetchImpl:async(url,options)=>{
+    const p=JSON.parse(options.body);calls++;
+    if(calls===1)return Response.json({error:{message:'filters not supported',param:'tools[0].filters'}},{status:400});
+    if(calls===2){assert.equal(p.tools[0].filters,undefined);assert.match(p.instructions,/sse.com.cn/);}
+    return success(url,options);
+  }});
+  assert.equal((await h(request())).status,200);assert.equal(calls,3);
+});
 test('missing configuration and authentication never call paid API',async()=>{
   let calls=0;const fetchImpl=async()=>{calls++;throw Error();};
   assert.equal((await createHandler({env:{},fetchImpl})(request())).status,503);

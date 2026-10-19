@@ -128,11 +128,12 @@ export function createHandler({ env = process.env, fetchImpl = fetch, now = Date
     if (now() - windowStart >= 3600000) { windowStart = now(); count = 0; }
     if (count >= 30 || active >= 2) return reply(429, { error: '搜索较频繁，请稍后再试。' });
     count++; active++;
+    let stage = 'research';
     try {
       const date = new Date(now()).toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' });
       // Both stages share one deadline, leaving time for the frontend to render errors.
       const signal = AbortSignal.timeout(timeoutMs);
-      const call = async payload => {
+      const call = async (payload, compatibilityRetry = false) => {
         const response = await fetchImpl('https://api.openai.com/v1/responses', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
@@ -140,6 +141,18 @@ export function createHandler({ env = process.env, fetchImpl = fetch, now = Date
         body: JSON.stringify({ model: env.OPENAI_MODEL || 'gpt-4.1-mini', store: false, ...payload })
         });
         if (!response.ok) {
+          const details = await response.json().catch(() => ({}));
+          const issue = details.error || {};
+          // Some older search models reject domain filters. Keep the same trusted
+          // source validation locally, and retry only this rejected (400) request.
+          if (response.status === 400 && !compatibilityRetry && payload.tools?.[0]?.filters && /filter|allowed_domains/i.test(`${issue.param || ''} ${issue.message || ''}`)) {
+            const retry = structuredClone(payload);
+            delete retry.tools[0].filters;
+            retry.instructions += ` 仅使用以下机构域名的资料：${SOURCE_DOMAINS.join('、')}。`;
+            return call(retry, true);
+          }
+          const token = value => typeof value === 'string' && /^[a-zA-Z0-9_.\[\]]{1,100}$/.test(value) ? value : null;
+          console.warn('finance_search_upstream', { stage, status: response.status, code: token(issue.code), param: token(issue.param) });
           const error = new Error('upstream'); error.status = response.status; throw error;
         }
         const data = await response.json();
@@ -158,6 +171,7 @@ export function createHandler({ env = process.env, fetchImpl = fetch, now = Date
       if (!research.output?.some(i => i.type === 'web_search_call' && i.status === 'completed') || !sources.length || !notes.trim()) {
         return reply(502, { error: '暂未找到足够的官方资料，请缩小问题范围；站内知识仍可阅读。' });
       }
+      stage = 'explanation';
       const edited = await call({
         max_output_tokens: 2600,
         text: { format: { type: 'json_schema', name: 'finance_explanation', strict: true, schema: answerSchema } },
@@ -169,6 +183,8 @@ export function createHandler({ env = process.env, fetchImpl = fetch, now = Date
       const parts = renderAnswer(answer, sources);
       return reply(200, { parts, generatedAt: new Date(now()).toISOString(), model: env.OPENAI_MODEL || 'gpt-4.1-mini', version: 'grounded-v2' });
     } catch (error) {
+      const known = ['upstream', 'incomplete', 'invalid answer', 'missing sources', 'unknown source', 'invalid concepts', 'invalid limitations', 'invalid followups'];
+      console.warn('finance_search_failure', { stage, reason: known.includes(error.message) ? error.message : error.name === 'TimeoutError' ? 'timeout' : 'invalid_response' });
       if (error.status === 429) return reply(429, { error: 'GPT 服务额度或频率受限，请稍后再试或由站点拥有者检查 API 账户。' });
       return reply(error.name === 'TimeoutError' || error.name === 'AbortError' ? 504 : 502,
         { error: '搜索服务暂未完成，请稍后重试。站内结果仍可阅读。' });
