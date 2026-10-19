@@ -3,3 +3,6 @@
 !.env.example
 .vercel/
 node_modules/
+.local-state/
+*.dpapi
+local-plus/*.log
