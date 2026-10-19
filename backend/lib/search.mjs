@@ -153,7 +153,7 @@ export function createHandler({ env = process.env, fetchImpl = fetch, now = Date
           }
           const token = value => typeof value === 'string' && /^[a-zA-Z0-9_.\[\]]{1,100}$/.test(value) ? value : null;
           console.warn('finance_search_upstream', { stage, status: response.status, code: token(issue.code), param: token(issue.param) });
-          const error = new Error('upstream'); error.status = response.status; throw error;
+          const error = new Error('upstream'); error.status = response.status; error.code = token(issue.code); throw error;
         }
         const data = await response.json();
         if (data.status !== 'completed') throw Error('incomplete');
@@ -185,7 +185,9 @@ export function createHandler({ env = process.env, fetchImpl = fetch, now = Date
     } catch (error) {
       const known = ['upstream', 'incomplete', 'invalid answer', 'missing sources', 'unknown source', 'invalid concepts', 'invalid limitations', 'invalid followups'];
       console.warn('finance_search_failure', { stage, reason: known.includes(error.message) ? error.message : error.name === 'TimeoutError' ? 'timeout' : 'invalid_response' });
-      if (error.status === 429) return reply(429, { error: 'GPT 服务额度或频率受限，请稍后再试或由站点拥有者检查 API 账户。' });
+      if (error.code === 'credit_balance_exhausted') return reply(429, { error: 'OpenAI API 可用余额已耗尽。请站点拥有者在 OpenAI Platform 的 Billing 页面补充余额后再搜索；访问码无需修改，站内资料仍可阅读。', code: 'API_BALANCE_EMPTY' });
+      if (error.code === 'insufficient_quota') return reply(429, { error: 'OpenAI API 账户额度不足，请站点拥有者检查 Billing 余额与项目额度后再试；访问码无需修改。', code: 'API_QUOTA_EXCEEDED' });
+      if (error.status === 429) return reply(429, { error: 'GPT 服务暂时达到调用频率限制，请稍后再试；访问码无需修改。', code: 'API_RATE_LIMITED' });
       return reply(error.name === 'TimeoutError' || error.name === 'AbortError' ? 504 : 502,
         { error: '搜索服务暂未完成，请稍后重试。站内结果仍可阅读。' });
     } finally { active--; }

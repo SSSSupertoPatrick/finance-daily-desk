@@ -26,7 +26,7 @@
 
 ## 验证
 
-在本目录运行 `npm test`。13 项测试使用模拟响应，不产生 API 费用；覆盖认证、来源补救、伪造 ID、冒牌域名、引用位置、卡片字段、共享超时与失败处理。真实答案质量需在部署后以 ETF、跟踪误差、降息/债券等问题单独验证。
+在本目录运行 `npm test`。14 项测试使用模拟响应，不产生 API 费用；覆盖认证、来源补救、伪造 ID、冒牌域名、引用位置、卡片字段、共享超时与失败处理。真实答案质量需在部署后以 ETF、跟踪误差、降息/债券等问题单独验证。
 
 官方文档：https://developers.openai.com/api/docs/guides/tools-web-search
 部署文档：https://vercel.com/docs/functions/runtimes/node-js

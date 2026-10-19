@@ -69,6 +69,12 @@ test('redacts upstream errors and handles timeout and rate limit',async()=>{
     const r=await createHandler({env,fetchImpl})(request());assert.equal(r.status,status);assert.ok(!(await r.text()).includes('secret diagnostic'));
   }
 });
+test('distinguishes exhausted balance from temporary rate limits',async()=>{
+  for(const [code,expected] of [['credit_balance_exhausted','API_BALANCE_EMPTY'],['insufficient_quota','API_QUOTA_EXCEEDED'],['rate_limit_exceeded','API_RATE_LIMITED']]){
+    const h=createHandler({env,fetchImpl:async()=>Response.json({error:{code,message:'private provider message'}},{status:429})});
+    const data=await (await h(request())).json();assert.equal(data.code,expected);assert.ok(!JSON.stringify(data).includes('private provider message'));
+  }
+});
 test('per-instance throttle prevents excessive repeated calls',async()=>{
   let calls=0;const h=createHandler({env,fetchImpl:async(...args)=>{calls++;return success(...args);}});
   for(let i=0;i<30;i++)assert.equal((await h(request())).status,200);
