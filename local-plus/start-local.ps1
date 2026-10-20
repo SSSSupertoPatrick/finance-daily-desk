@@ -4,7 +4,6 @@ $nodeCommand = Get-Command node -ErrorAction SilentlyContinue
 $nodePath = if ($nodeCommand) { $nodeCommand.Source } else { Join-Path $env:USERPROFILE '.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe' }
 if (-not (Test-Path -LiteralPath $nodePath)) { throw '找不到 Node.js，请安装 Node.js 24 后重试。' }
 $localService = Join-Path $PSScriptRoot 'server.mjs'
-$stateDirectory = Join-Path $PSScriptRoot '.local-state'
 $localUrl = 'http://127.0.0.1:18741/'
 function Test-LocalDesk {
   try {
@@ -17,15 +16,9 @@ if (Test-LocalDesk) {
   if ($OpenBrowser) { Start-Process $localUrl }
   exit 0
 }
-New-Item -ItemType Directory -Path $stateDirectory -Force | Out-Null
-$hostFile = Join-Path $stateDirectory 'host.json'
-try {
-  if (Test-Path -LiteralPath $hostFile -ErrorAction Stop) {
-    $null = Get-Content -LiteralPath $hostFile -Raw -ErrorAction Stop
-  }
-} catch {
-  throw '当前 Windows 账户无法访问本机登录目录。请在完成过授权的 Windows 账户中，从资源管理器双击启动知金台.cmd。'
-}
+$stateDirectory = & $nodePath (Join-Path $PSScriptRoot 'state-directory.mjs')
+if ($LASTEXITCODE -ne 0 -or -not $stateDirectory) { throw '无法准备本机配置，请将上方报错发给我。' }
+$stateDirectory = ([string]$stateDirectory).Trim()
 if (-not (Test-Path -LiteralPath (Join-Path $PSScriptRoot 'node_modules/jose/package.json'))) {
   & $nodePath (Join-Path $PSScriptRoot 'install.mjs')
   if ($LASTEXITCODE -ne 0) { throw '安装登录组件失败。' }

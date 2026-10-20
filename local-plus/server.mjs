@@ -6,11 +6,13 @@ import { dirname, join, resolve, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { ChatGPTAuth } from './auth.mjs';
 import { ProtectedStore } from './store.mjs';
+import { prepareStateDirectory } from './state-directory.mjs';
 import { searchPlus, plusError } from './inference.mjs';
 
 const directory = dirname(fileURLToPath(import.meta.url));
 setDefaultResultOrder('ipv4first');
-const stateDirectory = join(directory, '.local-state');
+const localState = await prepareStateDirectory();
+const stateDirectory = localState.directory;
 const siteDirectory = resolve(directory, '../site');
 const port = Number(process.env.FINANCE_DESK_PORT || 18741);
 const origin = `http://127.0.0.1:${port}`;
@@ -28,6 +30,7 @@ catch (error) {
 if (!/^urn:uuid:[\da-f-]{36}$/.test(hostId)) throw Error('Invalid host identifier.');
 const auth = new ChatGPTAuth({ store: new ProtectedStore(stateDirectory), hostId, callback: `${origin}/auth/callback` });
 await auth.init();
+if (!auth.account && localState.recovered) auth.lastError = '本机工作台已恢复。旧登录目录无法访问，请点击下方按钮重新连接 ChatGPT；旧登录资料已保留。';
 let busy = false, selectedModel = '', welcomed = auth.account?.welcomeSeen || false;
 
 const headers = { 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'no-referrer', 'X-Frame-Options': 'DENY', 'Cross-Origin-Resource-Policy': 'same-origin' };

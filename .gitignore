@@ -4,5 +4,6 @@
 .vercel/
 node_modules/
 .local-state/
+.user-state/
 *.dpapi
 local-plus/*.log

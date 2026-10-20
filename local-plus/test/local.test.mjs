@@ -66,7 +66,7 @@ test('Windows credential encryption roundtrips without storing plaintext', {skip
   const plaintext='fake-test-credential-123'; const encrypted=await protect(plaintext);assert.ok(!encrypted.includes(plaintext));assert.equal(await protect(encrypted,true),plaintext);
 });
 test('protected file store saves and loads atomically with private Windows ACL', {skip:process.platform!=='win32'},async()=>{
-  const root=new URL('../.local-state/',import.meta.url);await mkdir(root,{recursive:true});
+  const root=new URL('../.user-state/',import.meta.url);await mkdir(root,{recursive:true});
   const directory=await mkdtemp(fileURLToPath(new URL('test-',root)));const store=new ProtectedStore(directory);
   try{await store.save({access_token:'fake-store-only'});assert.equal((await store.load()).access_token,'fake-store-only');assert.ok(!(await readFile(directory+'/account.dpapi','utf8')).includes('fake-store-only'));}
   finally{await unlink(directory+'/account.dpapi').catch(()=>{});await rmdir(directory);}
