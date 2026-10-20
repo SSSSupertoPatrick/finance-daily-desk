@@ -21,6 +21,7 @@ await mkdir(stateDirectory, { recursive: true });
 let hostId;
 try { hostId = JSON.parse(await readFile(join(stateDirectory, 'host.json'), 'utf8')).id; }
 catch (error) {
+  if (error.code === 'EACCES' || error.code === 'EPERM') throw Error('当前 Windows 账户无权访问本机登录目录，请在完成授权的账户中双击启动知金台.cmd。');
   if (error.code !== 'ENOENT') throw Error('本机配置损坏，请恢复 host.json 后再启动。');
   hostId = `urn:uuid:${randomUUID()}`; await writeFile(join(stateDirectory, 'host.json'), JSON.stringify({ id: hostId }), { flag: 'wx' });
 }
