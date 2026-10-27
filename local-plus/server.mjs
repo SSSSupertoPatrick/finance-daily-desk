@@ -1,4 +1,5 @@
 import http from 'node:http';
+import { setPaused } from './service-runtime.mjs';
 import { knowledgeScript } from '../scripts/build-knowledge.mjs';
 import { setDefaultResultOrder } from 'node:dns';
 import { randomBytes, randomUUID } from 'node:crypto';
@@ -30,7 +31,7 @@ catch (error) {
 }
 if (!/^urn:uuid:[\da-f-]{36}$/.test(hostId)) throw Error('Invalid host identifier.');
 const auth = new ChatGPTAuth({ store: new ProtectedStore(stateDirectory), hostId, callback: `${origin}/auth/callback` });
-await auth.init();
+try { await auth.init(); } catch { auth.account=null; auth.lastError='本机登录暂不可用，基础内容仍可阅读。请重新连接 ChatGPT；原登录资料已保留。'; }
 if (!auth.account && localState.recovered) auth.lastError = '本机工作台已恢复。旧登录目录无法访问，请点击下方按钮重新连接 ChatGPT；旧登录资料已保留。';
 let busy = false, selectedModel = '', welcomed = auth.account?.welcomeSeen || false;
 
@@ -73,6 +74,7 @@ const server = http.createServer(async (req, res) => {
         needsWelcome: Boolean(auth.account?.access_token && !welcomed), error: auth.lastError || '', billing: 'chatgpt-plan'
       });
       if (url.pathname === '/api/shutdown' && req.method === 'POST') {
+        await setPaused(true);
         json(res, 200, { ok: true });
         setTimeout(() => { server.close(); server.closeAllConnections(); process.exit(0); }, 100);
         return;

@@ -14,7 +14,7 @@ main 分支通过 GitHub Actions 自动发布，Pages 发布来源已配置为 G
 工作流只发布 site/，不发布仓库说明或其他文件。
 
 ## 每日更新
-在 site/briefs/YYYY-MM-DD.html 保存已核验的简报，并更新 site/index.html 的 latest-brief 区域及内容日期；一次提交两个文件。提交会部署网站，但不会自动生成新闻，也不会发送邮件。
+在 site/briefs/YYYY-MM-DD.html 保存已核验的简报，并更新 site/index.html 的 latest-brief 区域及内容日期；运行 `node scripts/build-knowledge.mjs` 后，连同生成的 site/daily-knowledge.js 一起提交。热点速览与学习卡自动跟随当前简报；每天北京时间09:00后还没有当期内容会显示待更新提示。提交会部署网站，但不会自动生成新闻，也不会发送邮件。
 每日内容生成与邮件发送由原定时任务承担，已切换到本仓库和新网址，按北京时间每天 09:00 开始处理。网站本身不保存收件人或邮件凭据。
 
 ## 隐私

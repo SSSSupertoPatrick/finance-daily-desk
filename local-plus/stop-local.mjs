@@ -1,4 +1,6 @@
 const origin = 'http://127.0.0.1:18741';
+const { setPaused } = await import('./service-runtime.mjs');
+await setPaused(true);
 try {
   const home = await fetch(origin, { signal: AbortSignal.timeout(3000) });
   if (!(await home.text()).includes('本机 Plus')) throw Error('unexpected service');
