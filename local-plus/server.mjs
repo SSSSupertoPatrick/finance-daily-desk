@@ -1,4 +1,5 @@
 import http from 'node:http';
+import { knowledgeScript } from '../scripts/build-knowledge.mjs';
 import { setDefaultResultOrder } from 'node:dns';
 import { randomBytes, randomUUID } from 'node:crypto';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
@@ -115,6 +116,9 @@ const server = http.createServer(async (req, res) => {
     if (url.pathname === '/search-config.json') return json(res, 200, { mode: 'local-plus', endpoint: '/api/search' });
     if (url.pathname === '/local-plus.js') {
       res.writeHead(200, { ...headers, 'Content-Type': 'text/javascript; charset=utf-8' }); return res.end(await readFile(join(directory, 'ui.js')));
+    }
+    if (url.pathname === '/daily-knowledge.js') {
+      res.writeHead(200, { ...headers, 'Content-Type': 'text/javascript; charset=utf-8' }); return res.end(await knowledgeScript());
     }
     if (url.pathname === '/' || url.pathname === '/index.html') {
       let html = await readFile(join(siteDirectory, 'index.html'), 'utf8');
