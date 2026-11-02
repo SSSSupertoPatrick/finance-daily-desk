@@ -1,0 +1,160 @@
+{
+  "updated": "2026-11-02",
+  "note": "首期使用10月30日各市场已核验收盘数据。页面按日整理，不提供实时行情；盘中数据、收盘数据与期货表现分别标注。",
+  "markets": [
+    {
+      "id": "a-shares",
+      "name": "A股观察",
+      "label": "CHINA / A-SHARES",
+      "lead": "先看市场整体，再看行业与公司。",
+      "tradingDate": "2026-10-30",
+      "session": "北京时间收盘",
+      "indices": [
+        {
+          "name": "上证指数",
+          "code": "000001",
+          "change": -1.44,
+          "close": "3,599.02"
+        },
+        {
+          "name": "深证成指",
+          "code": "399001",
+          "change": -2.73
+        },
+        {
+          "name": "创业板指",
+          "code": "399006",
+          "change": -4.13
+        }
+      ],
+      "sources": [
+        {
+          "name": "上海证券报 · 新浪转载（10月30日15:14）",
+          "url": "https://finance.sina.com.cn/wm/2026-10-30/doc-iniwywts5480951.shtml"
+        }
+      ],
+      "focus": [
+        {
+          "title": "成长类指数跌幅更大，不能只看上证一个数字",
+          "date": "2026-10-30",
+          "fact": "上证、深证成指与创业板指当日均收跌；创业板指跌幅大于上证指数。上海证券报统计全市场成交额为16877亿元，超过4600只个股下跌。",
+          "plain": "看“大盘”像看班级平均分。不同指数选的学生、每个人的分量都不同，一个平均数不能代表所有股票。",
+          "watch": "解读：继续观察上涨与下跌家数、成交额及指数间差异。单日下跌并不能确认后续走势。",
+          "source": "https://finance.sina.com.cn/wm/2026-10-30/doc-iniwywts5480951.shtml"
+        },
+        {
+          "title": "周末PMI发布后，如何观察A股反应？",
+          "date": "2026-10-31",
+          "fact": "国家统计局发布10月制造业PMI为49.3%，比上月下降0.8个百分点。数据在10月30日收盘后发布。",
+          "plain": "周末的新信息是下一交易日需要关注的背景，不能倒过来解释周五收盘已经发生的所有涨跌。",
+          "watch": "解读：把企业订单、后续经营公告和市场定价结合起来，不把一项宏观数据直接等同于股价方向。",
+          "source": "https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261031_1965718.html"
+        }
+      ],
+      "lesson": {
+        "title": "为什么指数跌了，你的股票却可能涨？",
+        "text": "指数由一组股票按规则合成。成分股、权重和行业分布不同，就像不同配方的一篮子水果。指数表现反映这篮子的整体变化，不保证每只成分股同向，也不能用不同指数的点数直接比较贵便宜。"
+      }
+    },
+    {
+      "id": "us-stocks",
+      "name": "美股重点",
+      "label": "UNITED STATES / MAIN FOCUS",
+      "lead": "跟踪三大指数，重点理解科技股、财报与资金成本。",
+      "tradingDate": "2026-10-30",
+      "session": "美国东部时间常规交易收盘",
+      "indices": [
+        {
+          "name": "标普500",
+          "code": "S&P 500",
+          "change": -1.82,
+          "close": "约7,580"
+        },
+        {
+          "name": "纳斯达克综合",
+          "code": "NASDAQ COMPOSITE",
+          "change": -2.86,
+          "close": "25,437"
+        },
+        {
+          "name": "道琼斯工业",
+          "code": "DJIA",
+          "change": -1.09,
+          "close": "约51,770"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Investrade收盘回顾 · 10月30日",
+          "url": "https://investrade.com/market-review-october-30-2026/"
+        },
+        {
+          "name": "MT Newswires · Yahoo转载 · 10月30日",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-composite-marks-worst-month-205653774.html"
+        }
+      ],
+      "focus": [
+        {
+          "title": "科技股回撤，市场重新审视AI投入与回报",
+          "date": "2026-10-30",
+          "fact": "三大指数当日收跌，纳斯达克综合跌幅最大。Investrade当日回顾将科技股卖压与市场对AI资本开支及回报周期的担忧联系起来，这是该机构的市场解读。",
+          "plain": "公司大手笔盖厂房、买算力，就像店主先花钱装修。市场既看未来能多赚钱，也会问现在花多少钱、多久能回本。",
+          "watch": "解读：后续财报重点看资本开支、经营现金流、收入增长及管理层指引，避免把概念热度替代经营结果。",
+          "source": "https://investrade.com/market-review-october-30-2026/"
+        }
+      ],
+      "lesson": {
+        "title": "纳斯达克综合 ≠ 纳斯达克100",
+        "text": "两者选样范围与编制规则不同，不能混用涨跌幅。本页记录的是纳斯达克综合指数。理解美股还要区分常规交易与盘前盘后：订单、流动性和价格可能不同。"
+      },
+      "extraLesson": {
+        "title": "财报“不错”，股价为什么也会跌？",
+        "text": "股价会比较实际结果与市场此前的预期，还会考虑未来指引和估值。赚得比去年多，不一定超过大家已经计入价格的期待。这是理解定价的角度，不能据此预测某只股票。"
+      }
+    },
+    {
+      "id": "global-stocks",
+      "name": "其他海外市场",
+      "label": "GLOBAL / CONTEXT",
+      "lead": "补充日本与中国香港，观察跨市场分化。",
+      "tradingDate": "2026-10-30",
+      "session": "各市场当地收盘",
+      "indices": [
+        {
+          "name": "日经225",
+          "code": "日本",
+          "change": -2.12
+        },
+        {
+          "name": "恒生指数",
+          "code": "中国香港",
+          "change": 1.46
+        }
+      ],
+      "sources": [
+        {
+          "name": "BNY / StreetAccount亚洲市场回顾 · 10月30日",
+          "url": "https://www.adrbny.com/market-analysis/daily-dr-market-summary/adrnews.2026-10-30-streetaccount-summary-asian-market-recap-nikkei-212-hang-seng-146-shanghai-composite-144-as-of-0410-et.html"
+        }
+      ],
+      "focus": [
+        {
+          "title": "同一天，日本与香港市场方向不同",
+          "date": "2026-10-30",
+          "fact": "BNY刊载的亚洲收盘回顾记录：日经225下跌2.12%，恒生指数上涨1.46%。",
+          "plain": "海外市场并不是一整个班一起涨跌，各市场的行业结构、汇率环境和本地消息都有差别。",
+          "watch": "解读：跨市场比较先对齐交易日与时区，再看指数构成。相近时间一起涨跌，也不足以证明因果关系。",
+          "source": "https://www.adrbny.com/market-analysis/daily-dr-market-summary/adrnews.2026-10-30-streetaccount-summary-asian-market-recap-nikkei-212-hang-seng-146-shanghai-composite-144-as-of-0410-et.html"
+        }
+      ],
+      "lesson": {
+        "title": "海外股票涨了，人民币收益一定相同吗？",
+        "text": "未对冲汇率的简化情形下，人民币计价收益约为（1＋当地资产收益率）×（1＋外币兑人民币变化率）－1，还需扣除费用。股票本身和汇率是两层变化；具体产品可能有对冲或其他安排。"
+      }
+    }
+  ],
+  "timing": {
+    "text": "A股和美股交易时段不同。北京时间早上阅读时，通常参考A股上一个已完成交易日，以及美股最近一个已完成的常规交易日。周末、两地假期与美国夏令时切换都会影响日期，不能把两个市场的“今天”直接对齐。",
+    "source": "https://www.nyse.com/trade/trading-information"
+  }
+}
