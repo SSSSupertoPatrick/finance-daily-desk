@@ -2,7 +2,7 @@ name: Deploy finance desk
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/build-knowledge.mjs', '.github/workflows/pages.yml']
+    paths: ['site/**', 'scripts/build-knowledge.mjs', 'scripts/verify-pages.mjs', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -30,3 +30,8 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify published pages and current content
+        run: node scripts/verify-pages.mjs "$PAGES_URL" "$BUILD_SHA"
+        env:
+          PAGES_URL: ${{ steps.deployment.outputs.page_url }}
+          BUILD_SHA: ${{ github.sha }}
