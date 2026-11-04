@@ -1,48 +1,58 @@
 {
-  "updated": "2026-11-03",
-  "note": "本期采用11月2日最近已完成交易日收盘。指数与代表股按各卡片日期、时区标注；资料不足的方向留空，不沿用旧报价冒充本期。",
+  "updated": "2026-11-04",
+  "note": "A股及美股采用11月3日常规交易收盘；香港采用11月3日，日本11月3日因文化日休市，日股保留11月2日最近收盘。各案例分别标明交易日。本期未取得可靠成交额与全市场广度，未填造数据。",
   "markets": [
     {
       "id": "a-shares",
       "name": "A股观察",
       "label": "CHINA / A-SHARES",
       "lead": "先看市场整体，再看行业与公司。",
-      "tradingDate": "2026-11-02",
-      "session": "Asia/Shanghai · 2026-11-02 15:00 常规交易收盘",
+      "tradingDate": "2026-11-03",
+      "session": "Asia/Shanghai · 11月3日15:00常规交易收盘",
       "indices": [
         {
           "name": "上证指数",
           "code": "000001",
-          "change": 1.08,
-          "close": "3,638.03"
+          "change": -0.82,
+          "close": "3,608.10"
         },
         {
           "name": "深证成指",
           "code": "399001",
-          "change": 1.63,
-          "close": "11,010.68"
+          "change": -1.21,
+          "close": "10,876.99"
         },
         {
           "name": "创业板指",
           "code": "399006",
-          "change": 1.87,
-          "close": "2,458.70"
+          "change": -2.73,
+          "close": "2,391.65"
+        },
+        {
+          "name": "沪深300",
+          "code": "000300",
+          "change": -0.2,
+          "close": ""
         }
       ],
       "sources": [
         {
-          "name": "第一财经收盘报道 · 东方财富转载",
-          "url": "https://finance.eastmoney.com/a/202611023918690743.html"
+          "name": "澎湃新闻收盘报道 · 东方财富转载",
+          "url": "https://finance.eastmoney.com/a/202611033920223022.html"
+        },
+        {
+          "name": "金融界宽基指数复盘（沪深300）",
+          "url": "https://m.jrj.com.cn/madapter/finance/2026/11/03151658992759.shtml"
         }
       ],
       "focus": [
         {
-          "title": "A股反弹，指数与个股仍需分别观察",
-          "date": "2026-11-02",
-          "fact": "三大指数11月2日分别上涨1.08%、1.63%、1.87%。",
-          "plain": "不同指数代表不同股票篮子，涨幅不能代替企业盈利变化。",
-          "watch": "解读：继续核对企业经营、行业与指数构成，避免用单日涨跌推断长期方向。",
-          "source": "https://finance.eastmoney.com/a/202611023918690743.html"
+          "title": "三大指数收跌，指数之间的差异也值得看",
+          "date": "2026-11-03",
+          "fact": "上证、深证成指、创业板分别下跌0.82%、1.21%、2.73%；沪深300跌0.20%，本期未核验其精确收盘点位。",
+          "plain": "不同配方的股票篮子，遇到同一天的市场变化也会有不同表现。",
+          "watch": "分析：继续观察行业结构、公司财报与交易风险，不凭单日涨跌判断趋势。成交和全市场涨跌家数资料不足，留空。",
+          "source": "https://finance.eastmoney.com/a/202611033920223022.html"
         }
       ],
       "lesson": {
@@ -55,34 +65,38 @@
           "name": "青岛食品",
           "ticker": "001219",
           "market": "A股 · 深交所主板",
-          "tradeDate": "2026-11-02",
-          "session": "北京时间收盘；11月3日重新核验",
-          "change": 9.98,
-          "price": "21.93",
+          "tradeDate": "2026-11-03",
+          "session": "Asia/Shanghai · 15:00常规交易收盘",
+          "change": 0.14,
+          "price": "21.96",
           "currency": "元",
-          "limitStatus": "收盘涨停，公开复盘记录六连板",
-          "selection": "连续涨停的消费股，适合观察控制权预期与真实经营之间的差别。",
+          "limitStatus": "未涨停；当日高23.27元、低21.40元，收盘仅涨0.14%",
+          "selection": "重新核验后仍选作控制权预期案例：从此前连板转为小幅上涨，展示交易期待与经营兑现的区别。",
           "facts": [
-            "11月2日收盘21.93元、上涨9.98%；公开收盘复盘记录六连板。",
-            "公司10月30日风险公告重申：控制权变更仍在筹划，经营环境未发生重大变化。此前披露拟向青啤集团转让29.24%股份。"
+            "11月3日收盘21.96元、上涨0.14%；腾讯历史日线与华盛通收盘页面交叉核验。",
+            "11月3日风险提示报道指出，控制权变更仍存在不确定性；不能把筹划当成完成。"
           ],
-          "cause": "控制权筹划和消费题材可能带来资金关注；连续上涨也可能吸引短线交易。未核验到足以把当日涨幅完全归因于某一因素的证据。",
+          "cause": "分析：控制权预期可能继续带来关注，但此前连续上涨后波动增大。当日涨幅很小，不能断言某一消息主导全天价格。",
           "logic": [
             "潜在股东资源 → 市场形成渠道、品牌协同想象。",
             "真正的经营兑现 → 要落实到销售、毛利和现金回款。",
             "交易预期提前升温 → 股价可能先于经营结果变化。"
           ],
           "plain": "像一家饼干店可能迎来新股东，大家先期待它把货卖得更远。但期待中的渠道合作，还没有自动变成订单和利润。",
-          "watch": "后续看协议、价格及审批进展，以及实际渠道合作与销售表现。",
-          "boundary": "拟转让不等于完成；不能把它描述为首次获得国资属性，也不能把连板当成利润已兑现。",
+          "watch": "核对后续正式协议、审批及业务协同；观察销售、毛利和经营现金流。",
+          "boundary": "当日没有收盘涨停，不沿用上一交易日六连板的状态；涨幅0.14%不是全市场上涨排名。",
           "sources": [
             {
-              "name": "11月2日收盘核验",
-              "url": "https://market.weidn.com/cn/market/date/2026-11-02/"
+              "name": "华盛通11月3日收盘行情",
+              "url": "https://www.hstong.com/quotes/30000-001219-SZ?_p=1"
             },
             {
-              "name": "公司10月30日风险公告 · 新浪载原文",
-              "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12676550&stockid=001219"
+              "name": "11月3日风险提示报道",
+              "url": "https://static.weeklyonstock.com/26/1103/AKX26110322402415628.html"
+            },
+            {
+              "name": "腾讯历史日线核验接口",
+              "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz001219,day,2026-11-02,2026-11-03,2,qfq"
             }
           ]
         },
@@ -91,16 +105,16 @@
           "name": "健之佳",
           "ticker": "605266",
           "market": "A股 · 上交所主板",
-          "tradeDate": "2026-11-02",
-          "session": "北京时间收盘；11月3日重新核验",
-          "change": -9.99,
-          "price": "13.96",
+          "tradeDate": "2026-11-03",
+          "session": "Asia/Shanghai · 15:00常规交易收盘",
+          "change": -5.09,
+          "price": "13.25",
           "currency": "元",
-          "limitStatus": "收盘跌停",
-          "selection": "财报披露后触及跌停，便于拆解一次性税费与持续经营压力。",
+          "limitStatus": "收盘未跌停；历史日线高13.75元、低13.15元",
+          "selection": "财报及税费风险背景下连续承压的药店企业，今天重新核验其收盘变化，不沿用上一日跌停标签。",
           "facts": [
-            "11月2日收盘13.96元、下跌9.99%，证券之星收盘报道记录跌停。",
-            "10月31日披露的三季报显示：第三季度归母净亏损约3.12亿元。公司说明补缴税款及滞纳金影响利润，同时医药消费承压。"
+            "腾讯历史日线：11月2日收13.96元，11月3日收13.25元，按两日收盘价计算下跌约5.09%。",
+            "此前三季报披露的亏损及税费事项是背景资料，不是11月3日新增公告。"
           ],
           "cause": "财报中的大额亏损和税费事项，为盈利预期承压提供了可核验背景。它们与卖压的关联属于分析，不能据此测算各因素对跌幅的贡献。",
           "logic": [
@@ -110,11 +124,11 @@
           ],
           "plain": "药店有营业额，不代表赚的钱足够付房租和工资；若当期还要补交税费，报表利润会承受额外压力。",
           "watch": "关注同店销售、毛利率、低效门店调整、经营现金流及后续税务披露。",
-          "boundary": "不能把全部亏损都当成长期经营恶化，也不能把扣非亏损简单当作纯粹的一次性费用。",
+          "boundary": "本期下跌5.09%由两日收盘价计算，不代表跌停；不能量化税费、经营压力和交易情绪分别造成了多少跌幅。",
           "sources": [
             {
-              "name": "11月2日收盘核验",
-              "url": "https://wap.stockstar.com/detail/RB2026110200028861"
+              "name": "腾讯历史日线（两日收盘）",
+              "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh605266,day,2026-11-02,2026-11-03,2,qfq"
             },
             {
               "name": "公司2026年三季报 · 新浪载原文",
@@ -129,42 +143,42 @@
       "name": "美股重点",
       "label": "UNITED STATES / MAIN FOCUS",
       "lead": "跟踪三大指数，重点理解科技股、财报与资金成本。",
-      "tradingDate": "2026-11-02",
-      "session": "America/New_York · 2026-11-02 16:00 EST 常规交易收盘",
+      "tradingDate": "2026-11-03",
+      "session": "America/New_York · 11月3日16:00 EST常规交易收盘",
       "indices": [
         {
           "name": "标普500",
           "code": "S&P 500",
-          "change": -0.51,
-          "close": "7,541.40"
+          "change": 0.36,
+          "close": "7,568.92"
         },
         {
           "name": "纳斯达克综合",
           "code": "NASDAQ COMPOSITE",
-          "change": -1.07,
-          "close": "25,164.32"
+          "change": 0.83,
+          "close": "25,372.01"
         },
         {
           "name": "道琼斯工业",
           "code": "DJIA",
-          "change": 0.41,
-          "close": "51,983.98"
+          "change": -0.38,
+          "close": "51,786.72"
         }
       ],
       "sources": [
         {
-          "name": "美联社收盘报道 · 交叉核验指数",
-          "url": "https://apnews.com/article/475bb37b4d95dd99e26c94e708c99f8f"
+          "name": "美联社收盘记录 · KRMG转载（百分比由收盘变化计算并四舍五入）",
+          "url": "https://krmg.com/2026/11/03/how-major-us-stock-indexes-fared-tuesday-11-3-2026/"
         }
       ],
       "focus": [
         {
-          "title": "多数股票上涨，为何纳指仍跌？",
-          "date": "2026-11-02",
-          "fact": "11月2日标普和纳综收跌，道指收涨，市场表现分化。",
-          "plain": "少数权重股波动可能抵消更多股票的上涨。",
-          "watch": "解读：继续核对企业经营、行业与指数构成，避免用单日涨跌推断长期方向。",
-          "source": "https://apnews.com/article/475bb37b4d95dd99e26c94e708c99f8f"
+          "title": "科技股反弹与苹果成本压力同时存在",
+          "date": "2026-11-03",
+          "fact": "标普和纳综收涨，道指收跌；英伟达收涨2.29%，苹果收跌1.90%。",
+          "plain": "市场会同时比较增长期待与成本，不会给所有科技公司同一份成绩单。",
+          "watch": "分析：关注资本开支能否转成订单、交付与利润，以及成本上升能否传导到售价。",
+          "source": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-bounces-chips-lead-ai-210708706.html"
         }
       ],
       "lesson": {
@@ -178,13 +192,79 @@
       "representatives": [
         {
           "direction": "up",
-          "status": "unavailable",
-          "reason": "已检索11月2日美股上涨候选，但尚未完成收盘行情与当日催化的充分交叉核验；本期不沿用10月30日雪佛龙案例充数。 "
+          "name": "英伟达",
+          "ticker": "NVDA",
+          "market": "美股 · 纳斯达克",
+          "tradeDate": "2026-11-03",
+          "session": "America/New_York · 16:00 EST常规交易收盘",
+          "change": 2.29,
+          "price": "206.69",
+          "currency": "美元",
+          "limitStatus": "美股不适用A股10%涨跌停制度；本期未核验盘中暂停交易记录",
+          "selection": "重要AI芯片企业，体现科技股反弹及增长期待；并非当日涨幅最大的股票。",
+          "facts": [
+            "11月3日常规收盘206.69美元，涨2.29%；盘后206.20美元不计入本期涨跌幅。",
+            "当天收盘报道将其列为科技股反弹的重要参与者；本期未核验到当日新增公司订单公告。"
+          ],
+          "cause": "分析：此前下跌后的估值调整与AI需求期待可能共同影响价格。报道中的市场解释不等于新增订单已确定。",
+          "logic": [
+            "客户资本开支形成潜在算力采购需求。",
+            "产品交付、供给和产品组合影响收入与毛利。",
+            "市场比较实际盈利和此前期待，重新给出估值。"
+          ],
+          "plain": "像卖设备的商家被期待接到更多生意，但大家看好和订单真正交付是两步。",
+          "watch": "核对公司正式财报、交付、客户资本开支及现金回款。",
+          "boundary": "单日反弹不能证明估值便宜；不把涨幅归结为未披露订单。",
+          "sources": [
+            {
+              "name": "StockAnalysis常规收盘行情",
+              "url": "https://stockanalysis.com/stocks/nvda/"
+            },
+            {
+              "name": "当日收盘报道",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-bounces-chips-lead-ai-210708706.html"
+            }
+          ]
         },
         {
           "direction": "down",
-          "status": "unavailable",
-          "reason": "已检索11月2日科技股下跌线索，但个股收盘与具体催化尚未充分核验；本期暂留空，指数收盘数据已更新。"
+          "name": "苹果",
+          "ticker": "AAPL",
+          "market": "美股 · 纳斯达克",
+          "tradeDate": "2026-11-03",
+          "session": "America/New_York · 16:00 EST常规交易收盘",
+          "change": -1.9,
+          "price": "331.90",
+          "currency": "美元",
+          "limitStatus": "美股不适用A股10%涨跌停制度；本期未核验盘中暂停交易记录",
+          "selection": "收入增长与未来成本压力形成对照，适合解释收入、毛利率和预期差。",
+          "facts": [
+            "11月3日常规收盘331.90美元，跌1.90%；盘后报价不作为收盘。",
+            "11月2日官方财报披露季度收入1145亿美元、同比增12%，毛利率47.9%，其中包括关税退款的有利影响。"
+          ],
+          "cause": "分析：11月3日收盘报道关注存储成本等对未来利润率的压力。收入增长与股价下跌并不矛盾；不能量化各因素对跌幅的贡献。",
+          "logic": [
+            "销售数量、价格和产品组合共同影响收入。",
+            "零部件与服务相关投入改变成本。",
+            "毛利留存还要覆盖研发等开支，未来利润预期随之调整。"
+          ],
+          "plain": "小店卖得更多，但进货和运营更贵，投资人仍可能下调对未来赚多少的期待。",
+          "watch": "关注后续正式利润率、产品组合、零部件成本及费用变化。",
+          "boundary": "上一季毛利率不是下一季承诺；毛利率不等于净利润率，成本归因需持续核对。",
+          "sources": [
+            {
+              "name": "StockAnalysis常规收盘行情",
+              "url": "https://stockanalysis.com/stocks/aapl/"
+            },
+            {
+              "name": "苹果11月2日官方财报（背景）",
+              "url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/"
+            },
+            {
+              "name": "美联社当日市场报道",
+              "url": "https://apnews.com/article/0d235af127a92c68da0cc2c45c028cef"
+            }
+          ]
         }
       ]
     },
@@ -193,36 +273,44 @@
       "name": "其他海外市场",
       "label": "GLOBAL / CONTEXT",
       "lead": "补充日本与中国香港，观察跨市场分化。",
-      "tradingDate": "2026-11-02",
-      "session": "日本 Asia/Tokyo、中国香港 Asia/Hong_Kong · 11月2日各市场常规交易收盘",
+      "tradingDate": "2026-11-03",
+      "session": "香港 Asia/Hong_Kong · 11月3日收盘；日本 Asia/Tokyo · 11月3日休市，最近收盘11月2日",
       "indices": [
         {
-          "name": "日经225",
-          "code": "日本",
+          "name": "日经225（11月2日最近收盘）",
+          "code": "日本 · 11月3日休市",
           "change": -0.33,
           "close": "63,081.86"
         },
         {
           "name": "恒生指数",
-          "code": "中国香港",
-          "change": 0.42,
-          "close": "23,393.32"
+          "code": "香港 · 11月3日收盘",
+          "change": 0.57,
+          "close": "23,525.97"
         }
       ],
       "sources": [
         {
-          "name": "Armstrong Economics收盘记录",
+          "name": "11月3日各市场记录",
+          "url": "https://www.armstrongeconomics.com/market-talk/market-talk-november-3-2026/"
+        },
+        {
+          "name": "JPX官方休市日历",
+          "url": "https://www.jpx.co.jp/english/corporate/about-jpx/calendar/"
+        },
+        {
+          "name": "日股11月2日收盘记录",
           "url": "https://www.armstrongeconomics.com/market-talk/market-talk-november-2-2026/"
         }
       ],
       "focus": [
         {
-          "title": "日股与港股继续呈现分化",
-          "date": "2026-11-02",
-          "fact": "11月2日日经225下跌0.33%，恒生指数上涨0.42%。",
-          "plain": "行业构成和本地消息不同，海外市场不会整齐同向。",
-          "watch": "解读：继续核对企业经营、行业与指数构成，避免用单日涨跌推断长期方向。",
-          "source": "https://www.armstrongeconomics.com/market-talk/market-talk-november-2-2026/"
+          "title": "香港收涨，日本文化日休市",
+          "date": "2026-11-03",
+          "fact": "恒生指数11月3日收23525.97点、涨0.57%；日本股票市场休市。",
+          "plain": "同一个日期，有的市场交易，有的休息，不能给休市市场编一份当天涨跌。",
+          "watch": "分析：日本案例保留11月2日最近已完成交易日，后续再核对新一交易日的财报与价格；欧洲本期未收录充分核验的新增。",
+          "source": "https://www.armstrongeconomics.com/market-talk/market-talk-november-3-2026/"
         }
       ],
       "lesson": {
@@ -236,10 +324,10 @@
           "ticker": "8035",
           "market": "日本 · 东京证券交易所",
           "tradeDate": "2026-11-02",
-          "session": "日本11月2日收盘报道，11月3日重新核验",
+          "session": "Asia/Tokyo · 11月2日最近常规收盘；11月3日文化日休市",
           "change": 5.16,
           "limitStatus": "收盘涨跌幅；非实时行情",
-          "selection": "日本半导体设备公司，展示行业回撤中由业绩预期形成的分化。",
+          "selection": "因11月3日日本休市，重新检索后保留最近已完成交易日的东京电子案例；仍采用11月2日原日期。",
           "facts": [
             "11月2日亚洲收盘报道记录东京电子上涨5.16%，半导体企业表现分化。",
             "公司10月30日官方说明材料披露：本财年上半年销售额约1.6674万亿日元、营业利润约5067亿日元。"
@@ -261,6 +349,10 @@
             {
               "name": "东京电子10月30日官方业绩说明（PDF）",
               "url": "https://www.tel.com/ir/library/report/i61j9u00000000gf-att/fy27q2transcript-e.pdf"
+            },
+            {
+              "name": "JPX休市日历",
+              "url": "https://www.jpx.co.jp/english/corporate/about-jpx/calendar/"
             }
           ]
         },
@@ -270,10 +362,10 @@
           "ticker": "285A",
           "market": "日本 · 东京证券交易所",
           "tradeDate": "2026-11-02",
-          "session": "日本11月2日收盘报道，11月3日重新核验",
+          "session": "Asia/Tokyo · 11月2日最近常规收盘；11月3日文化日休市",
           "change": -15.78,
           "limitStatus": "收盘涨跌幅；非实时行情",
-          "selection": "存储芯片公司，与设备商形成对照，适合观察预期差和存储周期。",
+          "selection": "因11月3日日本休市，重新检索后保留最近已完成交易日的铠侠控股案例；仍采用11月2日原日期。",
           "facts": [
             "11月2日亚洲收盘报道记录铠侠下跌15.78%；另一篇中新经纬报道提到其谨慎展望及出货时点变化。",
             "具体指引数字本期未独立核验，不引用预测金额。"
@@ -295,6 +387,10 @@
             {
               "name": "中新经纬 · 东方财富转载",
               "url": "https://finance.eastmoney.com/a/202611023918066412.html"
+            },
+            {
+              "name": "JPX休市日历",
+              "url": "https://www.jpx.co.jp/english/corporate/about-jpx/calendar/"
             }
           ]
         }
