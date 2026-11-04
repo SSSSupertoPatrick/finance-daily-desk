@@ -1,4 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
+import { themePage } from './build-theme.mjs';
 const site = new URL('../site/', import.meta.url);
 const data = JSON.parse(await readFile(new URL('stocks-data.json', site), 'utf8'));
 const esc = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -42,5 +43,5 @@ const html = `<!doctype html>
 </style><link rel="stylesheet" href="stocks-representatives.css"></head><body><header><div class="header-inner"><a class="brand" href="index.html">知金台</a><nav class="header-links" aria-label="工作台导航"><a href="index.html">每日简报</a><a href="primary.html">一级市场</a><a href="index.html#smartSearch">搜索与知识</a></nav></div></header><main><section class="hero"><div><span class="eyebrow">EQUITY MARKETS / 独立股市板块</span><h1>A股与全球股市观察</h1><p>看懂涨跌背后的信息。中国市场打底，美股重点跟踪，再用其他市场补上全球视角。</p></div><div class="date-card"><span>本期内容核验</span><strong>${esc(data.updated)}</strong><span>每日北京时间 09:00 开始更新</span></div></section><nav class="jump" aria-label="市场分区"><a href="#a-shares">A股观察</a><a href="#us-stocks">美股重点</a><a href="#global-stocks">其他海外市场</a><a href="#market-clock">看懂交易日期</a></nav><div class="notice" role="status"><strong id="freshness">本期已核验 · ${esc(data.updated)}</strong><p>${esc(data.note)}</p></div>${data.markets.map(market).join('')}<section class="timing" id="market-clock"><span class="eyebrow">读市场，先对准时钟</span><h2>为什么早上看到的美股，是美国的前一交易日？</h2><p>${esc(data.timing.text)}</p><p>${link(data.timing.source,'纽约证券交易所交易时段')}</p></section><div class="footer-links"><a href="index.html">返回每日工作台 →</a><a href="primary.html">查看一级市场焦点 →</a></div><footer>知金台 · 股市信息与知识整理。涨跌幅均为对应交易日相对前收盘的变化；不同指数点位不能直接比较。事实、来源与解读分别呈现，不构成个性化买卖建议。</footer></main><script>
 (() => { const date = '${data.updated}'; const now = new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()); if(now > date) document.getElementById('freshness').textContent = '最近内容核验：'+date+' · 今日内容尚待更新，以下保留原交易日。'; })();
 </script></body></html>`;
-await writeFile(new URL('stocks.html',site), html);
+await writeFile(new URL('stocks.html',site), themePage(html,'stocks.html'));
 console.log('股市板块已生成：'+data.updated+'，'+data.markets.length+'个市场分区');

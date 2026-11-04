@@ -2,7 +2,7 @@ name: Deploy finance desk
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/build-knowledge.mjs', 'scripts/verify-pages.mjs', '.github/workflows/pages.yml']
+    paths: ['site/**', 'scripts/**', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read

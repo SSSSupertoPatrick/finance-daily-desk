@@ -1,4 +1,5 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
+import { themeAll } from './build-theme.mjs';
 import { fileURLToPath } from 'node:url';
 import { resolve, join } from 'node:path';
 const site = fileURLToPath(new URL('../site/', import.meta.url));
@@ -26,4 +27,5 @@ export async function knowledgeScript() {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   await writeFile(join(site,'daily-knowledge.js'),await knowledgeScript());
   console.log('每日知识卡已同步');
+  await themeAll();
 }

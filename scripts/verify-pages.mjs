@@ -12,7 +12,7 @@ const latest = homepage.match(/href=["'](briefs\/\d{4}-\d{2}-\d{2}\.html)["']/)?
 if (!latest) throw Error('Homepage has no dated brief link.');
 const paths = ['', 'index.html', 'primary.html', 'stocks.html', latest,
   'daily-knowledge.js', 'search.js', 'search.css', 'content-status.js',
-  'primary.css', 'primary.js', 'stocks-data.json', 'primary-data.json'];
+  'primary.css', 'primary.js', 'stocks-data.json', 'primary-data.json', 'pop.css', 'pop.js'];
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const expected = new Map(await Promise.all(paths.map(async path => [
   path, hash(await readFile(new URL('../site/' + (path || 'index.html'), import.meta.url)))
