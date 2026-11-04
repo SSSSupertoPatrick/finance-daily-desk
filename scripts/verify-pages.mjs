@@ -10,6 +10,10 @@ const revision = process.argv[3] || 'verification';
 const homepage = await readFile(new URL('../site/index.html', import.meta.url), 'utf8');
 const latest = homepage.match(/href=["'](briefs\/\d{4}-\d{2}-\d{2}\.html)["']/)?.[1];
 if (!latest) throw Error('Homepage has no dated brief link.');
+const marketsHTML = await readFile(new URL('../site/stocks.html', import.meta.url), 'utf8');
+for (const id of ['a-shares','hk-stocks','us-stocks','global-stocks']) {
+  if (!marketsHTML.includes('id="' + id + '"')) throw Error('Missing independent market section: ' + id);
+}
 const paths = ['', 'index.html', 'primary.html', 'stocks.html', latest,
   'daily-knowledge.js', 'search.js', 'search.css', 'content-status.js',
   'primary.css', 'primary.js', 'stocks-data.json', 'primary-data.json', 'pop.css', 'pop.js'];
