@@ -1,62 +1,58 @@
 {
-  "updated": "2026-11-06",
-  "note": "各市场统一采用北京时间11月6日09:00前最近已完成的常规交易日：11月5日；港股含收市竞价。未使用11月6日盘中或美股盘后。美股指数百分比由AP披露的收盘点位和跌点计算至两位小数。资料不足的代表股明确留空，非全市场涨跌排名。",
+  "updated": "2026-11-09",
+  "note": "周一早读按北京时间 09:00 的最近完整交易日统计。本期各区收盘日期均为 11 月 6 日，11 月 9 日盘中未纳入。",
   "markets": [
     {
       "id": "a-shares",
       "name": "A股观察",
       "label": "CHINA / A-SHARES",
-      "lead": "先看市场整体，再看行业与公司。",
-      "tradingDate": "2026-11-05",
+      "lead": "成长指数回撤较深，银行与电力部分股票逆势走强。",
+      "tradingDate": "2026-11-06",
       "session": "Asia/Shanghai · 15:00常规交易收盘 · 人民币",
       "indices": [
         {
           "name": "上证指数",
           "code": "000001",
-          "change": 0.1,
-          "close": "3,689.91"
+          "change": -1.1,
+          "close": "3,649.18"
         },
         {
           "name": "深证成指",
           "code": "399001",
-          "change": 1.19,
-          "close": "11,471.09"
+          "change": -2.57,
+          "close": "11,175.78"
         },
         {
           "name": "创业板指",
           "code": "399006",
-          "change": 0.87,
-          "close": "2,566.80"
+          "change": -3.96,
+          "close": "2,465.23"
         },
         {
           "name": "沪深300",
           "code": "000300",
-          "change": 0.29,
-          "close": ""
+          "change": -1.44,
+          "close": "4,054.28"
         }
       ],
       "sources": [
         {
-          "name": "三大指数收盘点位",
-          "url": "https://m.cngold.org/stock/xw10861523.html"
+          "name": "澎湃新闻 · 沪深收盘",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34420347"
         },
         {
-          "name": "第一财经收盘与市场广度",
-          "url": "https://finance.eastmoney.com/a/202611053923479464.html"
-        },
-        {
-          "name": "沪深300收盘涨跌幅；点位未填",
-          "url": "https://m.jrj.com.cn/madapter/finance/2026/11/05151659027392.shtml"
+          "name": "沪深指数数据",
+          "url": "https://stocklibs.com/"
         }
       ],
       "focus": [
         {
-          "title": "普涨与能源回调同时发生",
-          "date": "2026-11-05",
-          "fact": "沪深成交约2.12万亿元，超4800只个股上涨；中国石油跌7.93%。沪深300涨0.29%，本期未补填未经充分核对的精确点位。",
-          "plain": "同一条街，有的店受益于需求，有的店受原材料价格变化影响。",
-          "watch": "核对成交能否持续、涨幅覆盖范围及公司真实回款；不把交易软件的“主力资金”标签等同于可识别机构的真实动机。",
-          "source": "https://finance.eastmoney.com/a/202611053923479464.html"
+          "title": "沪深成交缩至 1.66 万亿元",
+          "date": "2026-11-06",
+          "fact": "沪深两市成交 16,578 亿元，较上一交易日少 4,601 亿元。澎湃援引 Wind 数据，含北交所约 4,700 只个股下跌。",
+          "plain": "下跌覆盖面较广，但银行与电力里仍有上涨股票。",
+          "watch": "观察市场宽度能否恢复，以及算力设备公司的订单和交付是否出现可核验变化。",
+          "source": "https://www.thepaper.cn/newsDetail_forward_34420347"
         }
       ],
       "lesson": {
@@ -66,79 +62,76 @@
       "representatives": [
         {
           "direction": "up",
-          "name": "中科飞测",
-          "ticker": "688361",
-          "market": "A股 · 上交所科创板",
-          "tradeDate": "2026-11-05",
-          "session": "Asia/Shanghai · 15:00常规收盘",
-          "change": 9.02,
-          "price": "269.00",
-          "currency": "元",
-          "limitStatus": "未涨停：最高295.80元，低于按昨收246.74元计算并按分取整的20%涨停价296.09元；收盘涨9.02%。",
-          "selection": "半导体检测设备与回购提议交织，适合区分经营逻辑和资本动作。",
+          "name": "沪农商行",
+          "ticker": "601825.SH",
+          "change": 4.27,
+          "price": "9.04",
+          "limitStatus": "日内最高 9.10 元，低于按前收 8.67 元计算的 9.54 元涨停价。",
+          "selection": "银行股逆势上涨的可核验例子。",
           "facts": [
-            "11月5日历史日线收269.00元，涨9.02%；最高295.80元、最低249.32元，行情脚本与盘后报道交叉核对。",
-            "11月4日公司公告披露实控人提议回购1亿至1.5亿元，仍需审批；不是已经完成回购。"
+            "11 月 6 日收盘 9.04 元；10 月 31 日发布三季报。"
           ],
-          "cause": "回购提议可能影响信心，设备需求预期也可能提高关注度；无法证明两者各贡献了多少涨幅。",
+          "cause": "大盘回撤时，银行股的盈利与分红预期可能相对受关注。",
           "logic": [
-            "晶圆厂投资可能带动检测量测设备需求。",
-            "订单仍需经过交付验收，才逐步反映为收入和现金。",
-            "回购是资本安排，不会自动带来新增销售。"
+            "存贷利差与业务规模决定利息收入",
+            "信用成本和资本充足率影响可分配利润"
           ],
-          "plain": "卖检测仪器像卖工厂质检工具，客户扩产有机会增加订单，但付了订金和最终验收不是一回事。",
-          "watch": "董事会回购方案、实际回购进度、订单与验收回款；仍按公司后续公告核对。",
-          "boundary": "未证明当日上涨来自公司回购成交，未披露的新订单不写成事实。",
+          "plain": "像收租经营，除了收租多少，还要看欠租和维修开支。",
+          "watch": "净息差、不良率、拨备和分红公告。",
+          "boundary": "板块走强无法确认资金动机或未来分红。",
           "sources": [
             {
-              "name": "盘后涨幅",
-              "url": "https://finance.sina.com.cn/stock/aiassist/ggsp/2026-11-05/doc-inixsmiu5623937.shtml"
+              "name": "历史行情",
+              "url": "https://cn.investing.com/equities/shanghai-rural-commercial-bank-historical-data"
             },
             {
-              "name": "公司回购提议原文",
-              "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12689975&stockid=688361"
-            },
-            {
-              "name": "收盘269.00交叉核对",
-              "url": "https://www.zhunshangshi.com/bk/821.html?page=1"
+              "name": "三季报",
+              "url": "https://static.cninfo.com.cn/finalpage/2026-10-31/1225649417.PDF"
             }
-          ]
+          ],
+          "market": "A股观察",
+          "tradeDate": "2026-11-06",
+          "session": "Asia/Shanghai · 15:00常规交易收盘 · 人民币",
+          "currency": "人民币"
         },
         {
           "direction": "down",
-          "name": "中国石油",
-          "ticker": "601857",
-          "market": "A股 · 上交所主板",
-          "tradeDate": "2026-11-05",
-          "session": "Asia/Shanghai · 15:00常规收盘",
-          "change": -7.93,
-          "price": "12.54",
-          "currency": "元",
-          "limitStatus": "未跌停：最低12.45元，高于昨收13.62元对应的跌停价12.26元；收盘跌7.93%。",
-          "selection": "大型能源权重与市场普涨背离，便于理解油价和产业链的不同影响。",
+          "name": "中际旭创",
+          "ticker": "300308.SZ",
+          "change": -9.19,
+          "price": "448.00",
+          "limitStatus": "日内最低 427.34 元，未触及按前收 493.33 元计算的创业板跌停价 394.66 元。",
+          "selection": "光模块硬件个股，与同日成长指数回撤形成对照。",
           "facts": [
-            "11月5日收12.54元、跌7.93%，最高12.90、最低12.45元；历史日线与券商收盘页交叉核对。",
-            "第一财经收评指出油气、煤炭与海运调整；这属于市场背景，不是公司业绩预告。"
+            "11 月 6 日跌 9.19%；10 月 30 日公告第三季度营收约 277.69 亿元。"
           ],
-          "cause": "油价回落预期可能压低上游盈利估计，但综合油企还包括炼化、销售与天然气，不能直接套用油价涨跌幅。",
+          "cause": "海外算力股先前下挫可能降低市场对光模块链条的估值意愿。",
           "logic": [
-            "上游原油售价预期变化影响单位盈利预期。",
-            "炼化原料成本与成品油售价也会变化，存在不同传导。",
-            "产量、成本、税费和汇率共同决定最终利润。"
+            "云厂商决定扩建节奏",
+            "数据中心互联需求影响高速光模块用量",
+            "交付及产品结构才反映到收入和利润"
           ],
-          "plain": "一家既采油又加工、卖油的企业，原料便宜对不同部门的作用不一样。",
-          "watch": "实际油气售价、产量、炼化价差和经营现金流；核实后续公司公告。",
-          "boundary": "股价下跌不是公司已公告利润下降7.93%；不推断具体投资者的卖出动机。",
+          "plain": "像给新园区铺网络：园区扩建多少、何时开工，都会影响设备供货。",
+          "watch": "高速模块出货、客户资本开支、收入与回款。",
+          "boundary": "股价下跌不能证实客户砍单。",
           "sources": [
             {
-              "name": "券商收盘及业务说明",
-              "url": "https://longbridge.com/zh-CN/quote/601857.SH"
+              "name": "金融界收盘",
+              "url": "https://summary.jrj.com.cn/stock/sz/300308"
             },
             {
-              "name": "第一财经收评",
-              "url": "https://finance.eastmoney.com/a/202611053923479464.html"
+              "name": "日线高低价",
+              "url": "https://www.yyqyx.com/s/300308.SZ"
+            },
+            {
+              "name": "公司三季报",
+              "url": "https://static.cninfo.com.cn/finalpage/2026-10-30/1225643953.PDF"
             }
-          ]
+          ],
+          "market": "A股观察",
+          "tradeDate": "2026-11-06",
+          "session": "Asia/Shanghai · 15:00常规交易收盘 · 人民币",
+          "currency": "人民币"
         }
       ]
     },
@@ -146,47 +139,47 @@
       "id": "hk-stocks",
       "name": "港股观察",
       "label": "HONG KONG / HK EQUITIES",
-      "lead": "独立跟踪恒指、恒生科技与国企指数，看平台消费与科技硬件的生意逻辑。",
-      "tradingDate": "2026-11-05",
+      "lead": "科技指数回撤较深，体育用品股出现逆势案例。",
+      "tradingDate": "2026-11-06",
       "session": "Asia/Hong_Kong · 常规交易含收市竞价完成 · 港元",
       "indices": [
         {
           "name": "恒生指数",
           "code": "HSI",
-          "change": 3.67,
-          "close": "24,796.98"
+          "change": -1.27,
+          "close": "24,481.86"
         },
         {
           "name": "恒生科技指数",
           "code": "HSTECH",
-          "change": 5.55,
-          "close": "4,154.29"
+          "change": -1.83,
+          "close": "4,078.23"
         },
         {
           "name": "恒生中国企业指数",
           "code": "HSCEI",
-          "change": 3.87,
-          "close": "8,369.08"
+          "change": -1.13,
+          "close": "8,274.10"
         }
       ],
       "sources": [
         {
-          "name": "新华社香港收盘：含三项指数",
-          "url": "https://news.ifeng.com/c/8xoEjw46ie1"
+          "name": "东方财富 · 港股收盘",
+          "url": "https://finance.eastmoney.com/a/202611063924832341.html"
         },
         {
-          "name": "21财经收盘及行业分化",
-          "url": "https://m.sfccn.com/2026/11-5/wNMDE0MDdfMjI5NTIwNQ.html"
+          "name": "国企指数历史数据",
+          "url": "https://www.stockq.org/index/HSCEI.php"
         }
       ],
       "focus": [
         {
-          "title": "互联网平台强，科技内部仍有分化",
-          "date": "2026-11-05",
-          "fact": "恒指、恒科、国企指数均上涨，主板成交3566.67亿港元；网易涨9.07%，中国石油H股跌4.16%。成交额不是南向净买入。",
-          "plain": "科技篮子里装着不同生意，用户付费平台和资本开支相关硬件并不总是同涨。",
-          "watch": "平台公司付费用户、广告与成本变化；区分行业轮动解释和公司正式公告。不据指数上涨推断南向资金方向。",
-          "source": "https://m.sfccn.com/2026/11-5/wNMDE0MDdfMjI5NTIwNQ.html"
+          "title": "港股三项主要指数收低",
+          "date": "2026-11-06",
+          "fact": "恒生科技指数下跌 1.83%，跌幅大于恒生指数的 1.27%。",
+          "plain": "港股大盘与科技篮子的公司和权重不同，净值变动也可能不同。",
+          "watch": "留意平台企业最新业绩以及各指数具体成分。",
+          "source": "https://finance.eastmoney.com/a/202611063924832341.html"
         }
       ],
       "lesson": {
@@ -200,75 +193,78 @@
       "representatives": [
         {
           "direction": "up",
-          "name": "网易-S",
-          "ticker": "09999.HK",
-          "market": "港股 · 香港交易所",
-          "tradeDate": "2026-11-05",
-          "session": "Asia/Hong_Kong · 11月5日常规收盘，含竞价",
-          "change": 9.07,
-          "price": "",
-          "currency": "港元",
-          "limitStatus": "港股不套用A股日涨跌停；本期未核验到VCM触发记录。精确收盘价未充分交叉核实，暂不填。",
-          "selection": "游戏内容与互联网服务的上涨样本，和算力设备有不同的变现路径。",
+          "name": "李宁",
+          "ticker": "02331.HK",
+          "change": 5.16,
+          "price": "15.48",
+          "limitStatus": "港股不采用 A 股式日涨跌停；未单独核实 VCM 触发记录。",
+          "selection": "大盘走弱时逆势上涨，且有可核对的特别股息消息。",
           "facts": [
-            "11月5日盘后两家财经报道均记录网易上涨9.07%。",
-            "当日互联网平台普遍上涨是已观察到的价格事实，不等于网易公告新增盈利。"
+            "11 月 6 日收报 15.48 港元。",
+            "财联社援引 11 月 5 日公告，特别股息每股人民币 2.32 元。"
           ],
-          "cause": "平台股整体重估可能提供背景，但尚不足以将9.07%归因于单一公司事件。",
+          "cause": "特别股息可能改变投资者对近期现金回报的预期。",
           "logic": [
-            "内容产品吸引用户使用。",
-            "留存和付费转化影响收入，研发与推广决定成本。",
-            "市场对未来现金流的估计改变，可先影响估值，再等待财报验证。"
+            "经营积累的现金可用于分派",
+            "除净后股份不再附带该次派息权",
+            "持续回报仍取决于经营现金流"
           ],
-          "plain": "像经营连载内容，热闹有流量，还要看读者会不会续费以及制作成本。",
-          "watch": "正式财报、游戏产品流水口径与留存、营销和研发开支；本期不编造订单或用户数据。",
-          "boundary": "未确认单一公司催化，不能把板块轮动当作经营改善已实现。",
+          "plain": "像小店把账上留存的钱分给店主，钱从店的账户转到店主账户。",
+          "watch": "除净、登记和派付公告、库存及零售表现。",
+          "boundary": "特别股息不能外推为每年相同派息，亦不能据此确定涨幅归因。",
           "sources": [
             {
-              "name": "21财经收盘",
-              "url": "https://m.sfccn.com/2026/11-5/wNMDE0MDdfMjI5NTIwNQ.html"
+              "name": "交易日涨跌",
+              "url": "https://aureliandataservices.com/movers?floor=1e9&market=all"
             },
             {
-              "name": "金融界盘后交叉核对",
-              "url": "https://m.jrj.com.cn/madapter/finance/2026/11/05163359028234.shtml"
+              "name": "长桥收盘",
+              "url": "https://longbridge.com/zh-CN/quote/2331.HK/news/304715246"
+            },
+            {
+              "name": "股息公告报道",
+              "url": "https://www.cls.cn/detail/2527039"
             }
-          ]
+          ],
+          "market": "港股观察",
+          "tradeDate": "2026-11-06",
+          "session": "Asia/Hong_Kong · 常规交易含收市竞价完成 · 港元",
+          "currency": "港元"
         },
         {
           "direction": "down",
-          "name": "中国石油股份",
-          "ticker": "00857.HK",
-          "market": "港股 · 香港交易所",
-          "tradeDate": "2026-11-05",
-          "session": "Asia/Hong_Kong · 常规交易含收市竞价完成",
-          "change": -4.16,
-          "price": "10.36",
-          "currency": "港元",
-          "limitStatus": "港股无A股式日涨跌停；VCM是否触发未核验，不作触发判断。",
-          "selection": "与A股同一公司、不同市场的对照样本，展示油价传导和A/H定价差异。",
+          "name": "腾讯控股",
+          "ticker": "00700.HK",
+          "change": -2.46,
+          "price": "419.80",
+          "limitStatus": "港股不采用 A 股式日涨跌停；未单独核实 VCM 触发记录。",
+          "selection": "大型平台股，与科技指数同向下跌。",
           "facts": [
-            "新华社记录11月5日H股收10.36港元，跌4.16%。",
-            "同日A股收12.54元、跌7.93%；币种、交易市场和投资者结构不同。"
+            "11 月 6 日收 419.80 港元；公司此前于 8 月 12 日披露二季度业绩。"
           ],
-          "cause": "油气盈利预期变化可能影响两地估值，跌幅不同还可能涉及各市场估值与交易环境，不能据此判定套利机会。",
+          "cause": "科技板块回调可能带来共同估值压力，单日影响难拆分。",
           "logic": [
-            "油气与炼化经营影响公司整体盈利预期。",
-            "A/H投资者对相同信息可能给出不同价格。",
-            "汇率、流动性和交易制度使两地价格不必同步。"
+            "游戏与广告带来收入",
+            "研发和基础设施投入影响利润兑现速度",
+            "预期与资金环境也影响估值"
           ],
-          "plain": "同一商品在两座商场有不同标价，标价比较还要统一币种和交易成本。",
-          "watch": "公司油气售价、成本与财报，以及港元人民币汇率；按同一时点比较A/H价格。",
-          "boundary": "不把H股价格乘一个随意汇率就宣称存在无风险收益；未核验的VCM记录不补写。",
+          "plain": "像一座商场同时收广告费和经营收入，扩建也要先花钱。",
+          "watch": "下一期游戏、广告收入和资本开支。",
+          "boundary": "同向下跌不能确认任何未披露经营变化。",
           "sources": [
             {
-              "name": "新华社收盘",
-              "url": "https://news.ifeng.com/c/8xoEjw46ie1"
+              "name": "收盘日线",
+              "url": "https://stockanalysis.com/quote/hkg/0700/history/"
             },
             {
-              "name": "证券之星交叉核对",
-              "url": "https://www.sohu.com/a/1097668251_122123195"
+              "name": "腾讯投资者关系",
+              "url": "https://www.tencent.com/investors/"
             }
-          ]
+          ],
+          "market": "港股观察",
+          "tradeDate": "2026-11-06",
+          "session": "Asia/Hong_Kong · 常规交易含收市竞价完成 · 港元",
+          "currency": "港元"
         }
       ]
     },
@@ -276,51 +272,47 @@
       "id": "us-stocks",
       "name": "美股重点",
       "label": "UNITED STATES / MAIN FOCUS",
-      "lead": "跟踪三大指数，重点理解科技股、财报与资金成本。",
-      "tradingDate": "2026-11-05",
+      "lead": "纳斯达克综合反弹，道指仍下跌。",
+      "tradingDate": "2026-11-06",
       "session": "America/New_York · 16:00 EST常规交易收盘 · 美元；排除盘后",
       "indices": [
         {
           "name": "标普500",
-          "code": "S&P 500",
-          "change": -4.36,
-          "close": "7,353.73"
+          "code": "SPX",
+          "change": 0.31,
+          "close": "7,376.86"
         },
         {
           "name": "纳斯达克综合",
-          "code": "NASDAQ Composite",
-          "change": -5.52,
-          "close": "24,315.00"
+          "code": "IXIC",
+          "change": 1.09,
+          "close": "24,579.42"
         },
         {
           "name": "道琼斯工业平均",
           "code": "DJIA",
-          "change": -3.44,
-          "close": "51,523.06"
+          "change": -0.46,
+          "close": "51,285.73"
         }
       ],
       "sources": [
         {
-          "name": "AP三大指数收盘，KRMG刊载；百分比按收盘与跌点计算",
-          "url": "https://krmg.com/2026/11/05/how-major-us-stock-indexes-fared-thursday-11-5-2026/"
+          "name": "美联社 · 美国收盘",
+          "url": "https://apnews.com/article/806f71d95105bc7efbc760b194dd8cad"
+        },
+        {
+          "name": "UPI 收盘复核",
+          "url": "https://www.upi.com/amp/Top_News/US/2026/11/06/nasdaq-rebounds-tech-stocks/5901794005326/"
         }
       ],
       "focus": [
         {
-          "title": "价格回落和数据中心政策担忧要分开记录",
-          "date": "2026-11-05",
-          "fact": "三大指数收跌。关于未来数据中心建设限制的报道是市场担忧，本期未将其写成已经全国生效的政策。",
-          "plain": "市场会为尚未落地的风险提前调整出价，出价变化并不证明风险一定发生。",
-          "watch": "实际政策原文、审批进度、企业资本开支与订单；注意纳斯达克综合不同于纳斯达克100。",
-          "source": "https://krmg.com/2026/11/05/how-major-us-stock-indexes-fared-thursday-11-5-2026/"
-        },
-        {
-          "title": "高通财报：实际业绩与未来预期不是一栏",
-          "date": "2026-11-05",
-          "fact": "公司11月4日发布财报；11月5日常规收156.75美元，跌9.49%。GAAP与调整后利润口径需要分别看。",
-          "plain": "交出的成绩单与下一季计划，即使同时发布，也在回答不同问题。",
-          "watch": "核对后续实际业绩、手机和非手机业务结构；不把预测当成承诺。",
-          "source": "https://www.sec.gov/Archives/edgar/data/804328/000080432826000127/qcom092726erex991.htm"
+          "title": "芯片股部分回升，指数表现分化",
+          "date": "2026-11-06",
+          "fact": "标普500和纳斯达克综合上涨，道指下跌。美国同期公布 10 月非农新增 16.5 万。",
+          "plain": "科技股的反弹可以抬高部分指数，就业数据则会影响利率预期。",
+          "watch": "观察云厂商实际扩建、芯片交付及债券收益率变化。",
+          "source": "https://apnews.com/article/806f71d95105bc7efbc760b194dd8cad"
         }
       ],
       "lesson": {
@@ -334,75 +326,74 @@
       "representatives": [
         {
           "direction": "up",
-          "name": "好时",
-          "ticker": "HSY",
-          "market": "美股 · NYSE",
-          "tradeDate": "2026-11-05",
-          "session": "America/New_York · 16:00 EST常规收盘",
-          "change": 1.68,
-          "price": "177.43",
-          "currency": "美元",
-          "limitStatus": "不套用A股涨停概念；未核验LULD暂停记录。",
-          "selection": "在大盘回落时上涨的消费品样本，说明板块与商业模式差别。",
+          "name": "AMD",
+          "ticker": "AMD",
+          "change": 11.04,
+          "price": "449.04",
+          "limitStatus": "采用美股常规时段收盘；盘中暂停或价格带事件未单独核实。",
+          "selection": "芯片反弹的代表，公司投资者关系页可核对收盘。",
           "facts": [
-            "11月5日常规收177.43美元、涨1.68%，排除随后177.00美元的盘后报价。",
-            "公司11月5日发布节日季产品信息；产品上新并未披露等额的实际新增订单。"
+            "11 月 6 日收 449.04 美元；11 月 3 日财报披露数据中心收入同比增长 97%。"
           ],
-          "cause": "消费品需求相对稳定可能令部分投资者重新衡量风险，但未取得足以确定具体资金动机的证据；不能直接认定节日上新造成涨幅。",
+          "cause": "前日急跌后，芯片价格反弹可能体现对增长预期的重新定价。",
           "logic": [
-            "品牌和渠道影响消费者选择。",
-            "销售数量、售价与可可等成本共同影响利润。",
-            "更稳定的现金流预期也仍可能被原料成本或消费降级打断。"
+            "云厂商部署服务器",
+            "处理器和加速卡销量影响收入",
+            "产品组合与供货影响利润"
           ],
-          "plain": "熟悉的巧克力品牌像常去的小店，客流可能较稳定，也会受进货成本和顾客预算影响。",
-          "watch": "节日销量、促销与库存、原料成本和公司正式财报。",
-          "boundary": "公司新品发布不是销售或利润保证；“防御”是相对概念，不能保证股票不跌。",
+          "plain": "像扩张中的工厂买更多设备，设备商要把设备交到客户手里才有收入。",
+          "watch": "数据中心收入、出货与第四季指引执行。",
+          "boundary": "当天涨幅无法确认新的客户订单。",
           "sources": [
             {
-              "name": "常规收盘",
-              "url": "https://stockanalysis.com/stocks/hsy/"
+              "name": "AMD 历史行情",
+              "url": "https://ir.amd.com/stock-data/price-history"
             },
             {
-              "name": "公司节日产品新闻稿",
-              "url": "https://www.prnewswire.com/news-releases/the-hershey-company-unwraps-festive-offerings-for-the-2026-holiday-season-302928258.html"
+              "name": "AMD 财报",
+              "url": "https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results"
             }
-          ]
+          ],
+          "market": "美股重点",
+          "tradeDate": "2026-11-06",
+          "session": "America/New_York · 16:00 EST常规交易收盘 · 美元；排除盘后",
+          "currency": "美元"
         },
         {
           "direction": "down",
-          "name": "高通",
-          "ticker": "QCOM",
-          "market": "美股 · NASDAQ",
-          "tradeDate": "2026-11-05",
-          "session": "America/New_York · 16:00 EST常规收盘",
-          "change": -9.49,
-          "price": "156.75",
-          "currency": "美元",
-          "limitStatus": "不套用A股跌停；盘后158.75美元不替代常规收盘。未核验交易暂停记录。",
-          "selection": "有正式财报与明确交易日，适合拆开财报实际值和市场预期。",
+          "name": "微软",
+          "ticker": "MSFT",
+          "change": -0.99,
+          "price": "530.61",
+          "limitStatus": "采用美股常规时段收盘；盘中暂停或价格带事件未单独核实。",
+          "selection": "大型云服务股未随芯片反弹，可比较产业链不同环节。",
           "facts": [
-            "公司11月4日发布FY2026第四财季财报，披露GAAP与Non-GAAP两种口径。",
-            "11月5日常规收156.75美元、跌9.49%，盘后报价单列。"
+            "11 月 6 日收 530.61 美元，前收 535.93 美元。",
+            "10 月 28 日业绩电话会披露当季资本开支 452 亿美元。"
           ],
-          "cause": "手机业务、未来指引和芯片行业风险的重新评估可能共同影响定价，不能把全部跌幅归为一项指标。",
+          "cause": "投资者可能同时衡量云业务增量和扩建成本，利率预期也会影响定价。",
           "logic": [
-            "手机芯片需求影响收入结构。",
-            "汽车、物联网和数据中心业务能否扩张，还需订单与交付验证。",
-            "未来利润期待或折现风险变化，会改变当前估值。"
+            "建设数据中心需要先花钱",
+            "出租算力与提供软件服务带来收入",
+            "利用率、折旧和电力成本决定投入回报"
           ],
-          "plain": "老业务像主食，新业务像新开窗口，不能因为新窗口有计划，就当作已经收到钱。",
-          "watch": "未来指引兑现、手机业务收入、非手机收入、利润和现金流的同口径变化。",
-          "boundary": "非GAAP与GAAP不可混比；管理层预测不是必然兑现；跌幅不是业绩下降幅度。",
+          "plain": "像先盖商场再收租：出租得快不快、租金能否覆盖开支，都要分开看。",
+          "watch": "Azure 增长、产能交付、资本开支和现金流。",
+          "boundary": "股价下跌不能证明云需求减速。",
           "sources": [
             {
-              "name": "正式财报",
-              "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432826000127/qcom092726erex991.htm"
+              "name": "收盘日线",
+              "url": "https://www.quiverquant.com/stock/MSFT/historical-prices/"
             },
             {
-              "name": "常规/盘后分列行情",
-              "url": "https://stockanalysis.com/stocks/qcom/"
+              "name": "微软电话会",
+              "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1"
             }
-          ]
+          ],
+          "market": "美股重点",
+          "tradeDate": "2026-11-06",
+          "session": "America/New_York · 16:00 EST常规交易收盘 · 美元；排除盘后",
+          "currency": "美元"
         }
       ]
     },
@@ -410,41 +401,55 @@
       "id": "global-stocks",
       "name": "其他海外市场",
       "label": "GLOBAL / CONTEXT",
-      "lead": "补充日本与其他海外市场；港股已在同级独立区域维护。",
-      "tradingDate": "2026-11-05",
-      "session": "Asia/Tokyo · 15:30常规交易收盘 · 日元；欧洲本期未填报价",
+      "lead": "日本主要指数下跌，欧洲斯托克600亦收低。",
+      "tradingDate": "2026-11-06",
+      "session": "日本 Asia/Tokyo 15:30 常规收盘（日元）；欧洲当地常规收盘，欧洲中部为 CET",
       "indices": [
         {
           "name": "日经225",
-          "code": "Nikkei 225",
-          "change": -1.79,
-          "close": "61,077.90"
+          "code": "N225",
+          "change": -5.96,
+          "close": "57,434.77"
         },
         {
-          "name": "东证指数",
+          "name": "东证股价指数",
           "code": "TOPIX",
-          "change": 1.16,
-          "close": "3,940.39"
+          "change": -5.9,
+          "close": "3,707.99"
+        },
+        {
+          "name": "斯托克欧洲600（涨跌幅约数）",
+          "code": "SXXP",
+          "change": -1,
+          "close": "648.33"
         }
       ],
       "sources": [
         {
-          "name": "新华财经东京收盘",
-          "url": "https://www.cnfin.com/gs-lb/detail/20261105/4491524_1.html"
+          "name": "新华财经 · 东京收盘",
+          "url": "https://www.cnfin.com/gs-lb/detail/20261106/4492157_1.html"
         },
         {
-          "name": "FRED日经日收盘序列",
-          "url": "https://fred.stlouisfed.org/series/NIKKEI225"
+          "name": "路透 · 欧洲收盘",
+          "url": "https://www.streetinsider.com/Reuters/Risk-off%2Bmood%2Bsweeps%2BEuropean%2Bstocks%2Bas%2BAI%2Bconcerns%2Bdeepen/27302409.html"
         }
       ],
       "focus": [
         {
-          "title": "日本两大指数方向不同",
-          "date": "2026-11-05",
-          "fact": "日经225跌1.79%，TOPIX涨1.16%；11月3日文化日休市后，11月4日至5日已正常交易。欧洲本期未完成足够交叉核验，暂不列数值。",
-          "plain": "一把尺子按高价股票影响计算，另一把尺子覆盖更广，读数可以不同。",
-          "watch": "分清价格加权和市值加权，并核对财报、汇率、政策与行业权重；不用11月6日日本午盘代替11月5日收盘。",
-          "source": "https://www.cnfin.com/gs-lb/detail/20261105/4491524_1.html"
+          "title": "东京两项主要指数双双回落",
+          "date": "2026-11-06",
+          "fact": "日经225跌 5.96%，东证指数收 3,707.99 点，跌 232.40 点。",
+          "plain": "前一夜美股硬件下跌后，日本相关行业也承压；两地交易时段不同。",
+          "watch": "比较日本设备厂商新披露的订单与出口销售。",
+          "source": "https://www.cnfin.com/gs-lb/detail/20261106/4492157_1.html"
+        },
+        {
+          "title": "欧洲斯托克600约跌 1%",
+          "date": "2026-11-06",
+          "fact": "路透报道欧洲斯托克600收于 648.33 点，保险等板块回落。",
+          "plain": "欧洲指数回撤，与美股科技股的局部反弹不同步。",
+          "watch": "跟踪保险及工业公司财报。",
+          "source": "https://www.streetinsider.com/Reuters/Risk-off%2Bmood%2Bsweeps%2BEuropean%2Bstocks%2Bas%2BAI%2Bconcerns%2Bdeepen/27302409.html"
         }
       ],
       "lesson": {
@@ -454,55 +459,84 @@
       "representatives": [
         {
           "direction": "up",
-          "name": "丰田汽车",
-          "ticker": "7203.T",
-          "market": "日本 · 东京证券交易所",
-          "tradeDate": "2026-11-05",
-          "session": "Asia/Tokyo · 15:30常规交易收盘",
-          "change": 16.68,
-          "price": "3,533",
+          "name": "Daytona",
+          "ticker": "7228.T",
+          "market": "日本 · 东证标准市场",
+          "tradeDate": "2026-11-06",
+          "session": "Asia/Tokyo · 15:30 常规交易收盘",
           "currency": "日元",
-          "limitStatus": "日本采用其自身价格限制制度，不套用A股封板概念；本期不判断是否触及日本涨跌幅边界。",
-          "selection": "公司当日财报与显著股价变化同时存在，便于观察指引与预期差。",
+          "price": "4,130",
+          "change": 5.36,
+          "limitStatus": "采用东京市场规则，未另核实是否触及个股价格限制。",
+          "selection": "东京大盘下挫时上涨，且有当日午间财报。",
           "facts": [
-            "丰田官网列明11月5日发布FY2027第二季度财务结果（截至2027年3月的财年）。",
-            "财联社盘后报道东京收盘3533日元、涨16.68%；新华财经确认当日上调全年营业利润预期。"
+            "11 月 6 日收报 4,130 日元；当日发布的三季报显示，前三季度营业利润约 17.46 亿日元，同比增长 36.9%。"
           ],
-          "cause": "盈利指引改善可能是重估因素，关税和行业轮动也可能影响预期；不将所有涨幅分配给单一消息。",
+          "cause": "当日披露的利润增长可能提供支撑。",
           "logic": [
-            "未来销量、售价、成本和汇率共同决定利润。",
-            "管理层上调盈利预估可能改变市场此前估计。",
-            "预期最终要由后续财报验证，不能只看短期价格。"
+            "摩托车配件通过批发和零售销售",
+            "销售与产品组合影响毛利",
+            "营运开支决定利润能保留多少"
           ],
-          "plain": "面馆老板提高明年利润预估，不是今天多收到了同等现金。",
-          "watch": "正式财报与指引调整依据、实际销量、汇率及成本；对照同一财年口径。",
-          "boundary": "所谓关税改善仅为市场预期，不当作已生效政策；财报发布与股价同日不证明单一因果。",
+          "plain": "就像一家摩托车配件店，除了货卖多少，还得算仓储和销售开支。",
+          "watch": "销量、库存、亚洲批发和全年业绩。",
+          "boundary": "无法由单日股价确定买盘动机或未来利润增速。",
           "sources": [
             {
-              "name": "公司财报入口",
-              "url": "https://global.toyota/en/ir/financial-results/"
+              "name": "收盘涨幅",
+              "url": "https://kabu.kininew.net/fiveup/8724.html"
             },
             {
-              "name": "财联社收盘",
-              "url": "https://finance.eastmoney.com/a/202611053923858378.html"
+              "name": "公司披露日历",
+              "url": "https://corporate.daytona.co.jp/ir/event.html"
             },
             {
-              "name": "新华财经财报背景",
-              "url": "https://www.cnfin.com/gs-lb/detail/20261105/4491524_1.html"
+              "name": "三季报披露",
+              "url": "https://disclosure.catr.jp/companies/834a2/49166/tdnet/5753e/792255"
             }
           ]
         },
         {
           "direction": "down",
-          "status": "unavailable",
-          "reason": "已重新检索11月5日日本及欧洲行情；尚未同时核实该方向个股的完整收盘数据与足够的公司原始材料。本期留空，不把盘中报道或旧案例作为新收盘。"
+          "name": "爱德万测试",
+          "ticker": "6857.T",
+          "change": -4.99,
+          "price": "28,015",
+          "limitStatus": "不沿用 A 股封板口径；未核实东京交易所个股价格限制的实际触发。",
+          "selection": "测试设备商能展示算力芯片预期向上游传导。",
+          "facts": [
+            "11 月 6 日收报 28,015 日元；10 月 28 日公司上调本财年销售和营业利润预测。"
+          ],
+          "cause": "芯片股调整可能压低测试设备的增长定价，即使公司此前上调预测。",
+          "logic": [
+            "高性能芯片需要更多测试",
+            "新测试设备采购取决于客户投产计划",
+            "实际设备交付影响确认收入"
+          ],
+          "plain": "像芯片生产线的质检站，货品复杂了，质检设备需求也可能变多。",
+          "watch": "公司指引、客户投产和测试设备订单。",
+          "boundary": "日线收跌幅与盘中最大跌幅不同；股价变动不足以证明订单流失。",
+          "sources": [
+            {
+              "name": "收盘历史行情",
+              "url": "https://jp.investing.com/equities/advantest-corp.-historical-data"
+            },
+            {
+              "name": "公司预测",
+              "url": "https://www.advantest.com/en/investors/financial-highlights/forecast/"
+            }
+          ],
+          "market": "其他海外市场",
+          "tradeDate": "2026-11-06",
+          "session": "Asia/Tokyo · 15:30 常规交易收盘",
+          "currency": "日元"
         }
       ]
     }
   ],
   "timing": {
-    "text": "北京时间每日09:00以各地最近完整常规交易日为基准；本期A股/港股/美国/日本均为11月5日。美国已进入EST（UTC−5），港股Asia/Hong_Kong，A股Asia/Shanghai，日本Asia/Tokyo。欧洲本期未形成足够核验资料，未填行情。",
-    "source": "https://krmg.com/2026/11/05/how-major-us-stock-indexes-fared-thursday-11-5-2026/"
+    "text": "A股以北京时间 15:00、港股以香港收市竞价结束、日本以东京 15:30 为收盘口径；美股纽约 16:00 EST 对应北京时间次日 05:00。",
+    "source": "https://www.nyse.com/markets/hours-calendars"
   },
   "representativePolicy": "综合事件清晰度、行业影响和证据质量选择，非全市场排名；事实与原因分析分开。缺少收盘或事件证据时留空，不沿用旧交易日冒充当天。"
 }
