@@ -1,8 +1,70 @@
 {
-  "updated": "2026-11-17",
-  "note": "本期核验 2 条 11 月 16 日的新增进展。近期案例保留原公告日期。",
-  "status": "本期新增 · 先通医药招股、Taboola 收购安排生效",
+  "updated": "2026-11-18",
+  "note": "本期新增 1 条可核验并购进展，公告日期为 11 月 17 日。近期案例保留原公告日期。",
+  "status": "本期新增 · 上海亚虹部分要约收购报告书披露",
   "cases": [
+    {
+      "id": "shanghai-yahong-tender-20261117",
+      "category": "merger",
+      "type": "并购 · 主动部分要约",
+      "region": "中国",
+      "date": "2026-11-17",
+      "title": "飞科投资向上海亚虹其他股东提出部分要约",
+      "company": "上海飞科投资有限公司 / 上海亚虹（603159.SH）",
+      "amount": "约 3.06",
+      "unit": "亿元人民币",
+      "amountLabel": "现金对价上限",
+      "stage": "报告书披露，股份接受期尚未开始",
+      "color": "yellow",
+      "intro": "11 月 17 日披露报告书，现金要约价每股 21.43 元，拟收购 1,429.4 万股。",
+      "facts": [
+        "先前协议受让 29.99% 股份已完成过户，本次要约计划另收购 10.21%。",
+        "要约期为 11 月 19 日至 12 月 18 日。若按计划上限完成，合计持股为 40.20%。",
+        "财务顾问报告列出按要约价格和股数计算的最高资金总额 306,320,420 元。"
+      ],
+      "parties": "现金收购方是飞科投资，标的是上海亚虹流通 A 股，交易对手是有效接受要约的其他股东。无创投轮次。",
+      "business": "分析：提升持股比例可强化治理影响力。经营改善还需要具体的管理、资源整合或业务措施，并以之后的披露和现金流验证。",
+      "flow": [
+        "协议转让完成过户",
+        "向其他股东发出限量现金要约",
+        "根据有效申报确定受让股份，随后结算",
+        "核对最终持股与后续经营动作"
+      ],
+      "moneyUse": [
+        "现金支付给有效接受要约并完成转让的股东。",
+        "这是存量股权转让对价，标的公司的经营资金需从其披露另行核验。"
+      ],
+      "milestones": [
+        {
+          "name": "29.99% 协议转让完成过户",
+          "state": "已披露"
+        },
+        {
+          "name": "11 月 17 日披露要约报告书",
+          "state": "已披露"
+        },
+        {
+          "name": "接受要约及结算",
+          "state": "待完成"
+        }
+      ],
+      "watch": [
+        {
+          "title": "看最终受让",
+          "text": "核对要约结束公告、有效申报数量、实际收购股份与交割结果。",
+          "kind": "验证"
+        }
+      ],
+      "unknown": [
+        "最终有效接受股数、实际支付额及后续协同效果待披露。"
+      ],
+      "plain": "已经买到第一批股权，现在按公开条款再向其他股东买一批。算最终持股时，要等这一批实际交易完成。",
+      "source": {
+        "name": "上海亚虹要约收购报告书",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-11-17/1225673196.PDF"
+      },
+      "number": "01"
+    },
     {
       "id": "sinotau-hk-offer-20261116",
       "category": "ipo",
@@ -58,7 +120,7 @@
         "name": "港交所刊载的先通医药招股章程及时间表",
         "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1116/2026111600012_c.pdf"
       },
-      "number": "01"
+      "number": "02"
     },
     {
       "id": "taboola-dianomi-effective-20261116",
@@ -124,7 +186,7 @@
         "name": "Taboola 发布的协议生效公告",
         "url": "https://investors.taboola.com/static-files/5f0abfdc-4c5a-41e6-b21c-6e3f87730c82"
       },
-      "number": "02"
+      "number": "03"
     },
     {
       "id": "icbc-capital-review-20261111",
@@ -180,7 +242,7 @@
         "name": "工商银行审核进展与原计划",
         "url": "https://www.thepaper.cn/newsDetail_forward_34453542"
       },
-      "number": "03"
+      "number": "04"
     },
     {
       "id": "loreal-pam2l-20261108",
@@ -235,7 +297,7 @@
         "name": "欧莱雅中国发布稿",
         "url": "https://www.prnasia.com/story/555303-1.shtml"
       },
-      "number": "04"
+      "number": "05"
     },
     {
       "id": "huaxin-csn-20261109",
@@ -290,7 +352,7 @@
         "name": "华新建材交易公告全文（公开转载）",
         "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12696326&stockid=600801"
       },
-      "number": "05"
+      "number": "06"
     },
     {
       "id": "sand-ai-a-plus-20261105",
@@ -298,7 +360,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-05",
-      "number": "06",
+      "number": "07",
       "title": "2亿美元之后：模型、算力与付费客户怎么接上？",
       "company": "Sand.ai · 视频生成模型",
       "amount": "2",
@@ -394,7 +456,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-03",
-      "number": "07",
+      "number": "08",
       "title": "5亿元C+轮之后，资金怎样走向产品价值？",
       "company": "暖芯迦 · 视觉脑机接口",
       "amount": "5",
@@ -470,7 +532,7 @@
       "type": "产业资本",
       "region": "中国",
       "date": "2026-10-30",
-      "number": "08",
+      "number": "09",
       "title": "50亿的投资计划，离真正投出去还有几步？",
       "company": "招商公路 × 人工智能产业基金",
       "amount": "50",
@@ -571,7 +633,7 @@
       "type": "创投融资",
       "region": "全球 · 美国",
       "date": "2026-10-29",
-      "number": "09",
+      "number": "10",
       "title": "都叫融资，这1亿美元其实分成两种钱。",
       "company": "Collective · 面向个体创业者的财务平台",
       "amount": "1",
@@ -662,7 +724,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-10-28",
-      "number": "10",
+      "number": "11",
       "title": "7亿元B轮之后，脑机接口还要闯哪些关？",
       "company": "脑虎科技 · 脑机接口",
       "amount": "7",
