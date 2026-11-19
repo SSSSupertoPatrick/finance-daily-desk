@@ -1,8 +1,69 @@
 {
-  "updated": "2026-11-18",
-  "note": "本期新增 1 条可核验并购进展，公告日期为 11 月 17 日。近期案例保留原公告日期。",
-  "status": "本期新增 · 上海亚虹部分要约收购报告书披露",
+  "updated": "2026-11-19",
+  "note": "本期新增 1 条经交易所原文核验的并购进度。近期案例保留原公告日期。",
+  "status": "本期新增 · 长源东谷申请延期回复问询",
   "cases": [
+    {
+      "id": "changyuandonggu-inquiry-delay-20261118",
+      "category": "merger",
+      "type": "并购 · 股份支付及配套融资",
+      "region": "中国",
+      "date": "2026-11-18",
+      "title": "长源东谷申请延期回复重组问询",
+      "company": "长源东谷（603950.SH）／襄阳康豪机电工程",
+      "amount": "未列示",
+      "unit": "",
+      "amountLabel": "本次进度公告未列交易金额",
+      "stage": "已申请延期回复审核问询，待审核与注册",
+      "color": "pink",
+      "intro": "11 月 18 日，公司披露，部分问询事项尚需落实，申请延期不超过 1 个月提交回复。",
+      "facts": [
+        "拟发行股份购买湖北芯源动力科技集团持有的康豪机电 100% 股权，同时向不超过 35 名特定投资者募集配套资金。",
+        "10 月 19 日收到上交所问询函。11 月 18 日公告申请自回复期限届满起延期不超过 1 个月。",
+        "本次交易构成重大资产重组，仍需交易所审核与证监会注册。"
+      ],
+      "parties": "股份收购方为长源东谷，股权出售方为湖北芯源动力科技集团，标的为康豪机电全部股权。配套融资认购方以最终发行文件为准，无创投轮次。",
+      "business": "分析：通过发行新股取得业务，可以把双方经营资源纳入同一上市公司。股数、资产价值、整合成本和实际利润贡献会共同影响原股东的权益。",
+      "flow": [
+        "核实问询事项并提交完整回复",
+        "接受交易所审核及履行注册程序",
+        "满足交易条件后实施股份发行与资产交割",
+        "在后续报表中核对整合结果"
+      ],
+      "moneyUse": [
+        "本次进度公告未列配套资金的具体用途与金额，需查看重组报告书及更新文件。"
+      ],
+      "milestones": [
+        {
+          "name": "10 月 19 日收到审核问询函",
+          "state": "已披露"
+        },
+        {
+          "name": "11 月 18 日披露申请延期",
+          "state": "已披露"
+        },
+        {
+          "name": "回复、审核、注册及交割",
+          "state": "待完成"
+        }
+      ],
+      "watch": [
+        {
+          "title": "完整回复和交易条件",
+          "text": "跟踪延期安排、问询回复、估值依据、配套资金条款及审核结果。",
+          "kind": "验证"
+        }
+      ],
+      "unknown": [
+        "本次进度公告未列交易估值、股份发行数量、配套融资实际认购方及最终交割时间。"
+      ],
+      "plain": "像收购一家工厂前，审核方要求补齐资料。现在多申请一点时间整理材料，之后还要逐项核对和继续走审批。",
+      "source": {
+        "name": "上交所刊载的延期回复公告",
+        "url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-11-18/603950_20261118_W49W.pdf"
+      },
+      "number": "01"
+    },
     {
       "id": "shanghai-yahong-tender-20261117",
       "category": "merger",
@@ -63,7 +124,7 @@
         "name": "上海亚虹要约收购报告书",
         "url": "https://static.cninfo.com.cn/finalpage/2026-11-17/1225673196.PDF"
       },
-      "number": "01"
+      "number": "02"
     },
     {
       "id": "sinotau-hk-offer-20261116",
@@ -120,7 +181,7 @@
         "name": "港交所刊载的先通医药招股章程及时间表",
         "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1116/2026111600012_c.pdf"
       },
-      "number": "02"
+      "number": "03"
     },
     {
       "id": "taboola-dianomi-effective-20261116",
@@ -186,7 +247,7 @@
         "name": "Taboola 发布的协议生效公告",
         "url": "https://investors.taboola.com/static-files/5f0abfdc-4c5a-41e6-b21c-6e3f87730c82"
       },
-      "number": "03"
+      "number": "04"
     },
     {
       "id": "icbc-capital-review-20261111",
@@ -242,7 +303,7 @@
         "name": "工商银行审核进展与原计划",
         "url": "https://www.thepaper.cn/newsDetail_forward_34453542"
       },
-      "number": "04"
+      "number": "05"
     },
     {
       "id": "loreal-pam2l-20261108",
@@ -297,7 +358,7 @@
         "name": "欧莱雅中国发布稿",
         "url": "https://www.prnasia.com/story/555303-1.shtml"
       },
-      "number": "05"
+      "number": "06"
     },
     {
       "id": "huaxin-csn-20261109",
@@ -352,7 +413,7 @@
         "name": "华新建材交易公告全文（公开转载）",
         "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12696326&stockid=600801"
       },
-      "number": "06"
+      "number": "07"
     },
     {
       "id": "sand-ai-a-plus-20261105",
@@ -360,7 +421,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-05",
-      "number": "07",
+      "number": "08",
       "title": "2亿美元之后：模型、算力与付费客户怎么接上？",
       "company": "Sand.ai · 视频生成模型",
       "amount": "2",
@@ -456,7 +517,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-03",
-      "number": "08",
+      "number": "09",
       "title": "5亿元C+轮之后，资金怎样走向产品价值？",
       "company": "暖芯迦 · 视觉脑机接口",
       "amount": "5",
@@ -532,7 +593,7 @@
       "type": "产业资本",
       "region": "中国",
       "date": "2026-10-30",
-      "number": "09",
+      "number": "10",
       "title": "50亿的投资计划，离真正投出去还有几步？",
       "company": "招商公路 × 人工智能产业基金",
       "amount": "50",
@@ -633,7 +694,7 @@
       "type": "创投融资",
       "region": "全球 · 美国",
       "date": "2026-10-29",
-      "number": "10",
+      "number": "11",
       "title": "都叫融资，这1亿美元其实分成两种钱。",
       "company": "Collective · 面向个体创业者的财务平台",
       "amount": "1",
@@ -724,7 +785,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-10-28",
-      "number": "11",
+      "number": "12",
       "title": "7亿元B轮之后，脑机接口还要闯哪些关？",
       "company": "脑虎科技 · 脑机接口",
       "amount": "7",
