@@ -1,8 +1,79 @@
 {
-  "updated": "2026-11-19",
-  "note": "本期新增 1 条经交易所原文核验的并购进度。近期案例保留原公告日期。",
-  "status": "本期新增 · 长源东谷申请延期回复问询",
+  "updated": "2026-11-23",
+  "note": "11 月 23 日核验：本期新增 1 则周末公告案例（公告日期 11 月 21 日），保留历史事件原日期。原文链接及全文镜像均已定位；交割进度未确认。",
+  "status": "本期新增 · 渤海化学现金收购协议",
   "cases": [
+    {
+      "id": "bohai-grui-agreement-20261121",
+      "category": "merger",
+      "type": "并购 · 现金收购",
+      "region": "中国",
+      "date": "2026-11-21",
+      "title": "渤海化学签署协议，拟 3.76 亿元收购格瑞新材 80% 股份",
+      "company": "渤海化学（600800.SH）／广东格瑞新材料",
+      "amount": "3.76",
+      "unit": "亿元人民币",
+      "amountLabel": "80% 股份的协议现金对价",
+      "stage": "董事会已通过并签署协议，交割完成待核验",
+      "color": "yellow",
+      "intro": "本期纳入周末可核验的新公告。董事会审议发生于 11 月 20 日，正式公告日期为 11 月 21 日；不把它写成 23 日新成交。",
+      "facts": [
+        "拟收购格瑞新材 80% 股份，交易对价 3.76 亿元；资金来自自有资金及银行贷款，按协议分期支付。",
+        "交易经董事会审议通过，公告称不构成重大资产重组或关联交易，无需提交股东会审议。",
+        "标的从事改性塑料及精密锂电结构件等业务；公告提示整合风险与业绩承诺无法实现的风险。"
+      ],
+      "parties": "买方为渤海化学，卖方为协议所列格瑞新材原股东。此为股份收购，不设创投轮次；收购价款支付给出让股东。",
+      "business": "分析：从基础化工延伸到新材料，可能拓展客户与产品组合。能否创造价值取决于客户稳定性、产品利润率、整合成本和借款成本，签约本身无法证明协同已实现。",
+      "flow": [
+        "按协议落实付款与交割条件",
+        "办理股份转让并核验控制权交接",
+        "交割后按适用会计规则并表",
+        "跟踪实际利润、现金流及业绩承诺履行"
+      ],
+      "moneyUse": [
+        "3.76 亿元为股份购买对价，不是全部注入标的的研发或扩产资金。",
+        "自有资金与银行贷款各自比例、利率及实际提款金额未在本期摘要列示，不作资金用途饼图。"
+      ],
+      "milestones": [
+        {
+          "name": "8 月 13 日签署意向协议",
+          "state": "已披露"
+        },
+        {
+          "name": "11 月 20 日董事会通过交易方案",
+          "state": "已披露"
+        },
+        {
+          "name": "股份交割、付款及并表",
+          "state": "待后续核验"
+        }
+      ],
+      "watch": [
+        {
+          "title": "钱付了多少，股份过户了吗？",
+          "text": "跟踪分期付款、贷款成本、交割公告、并表范围及承诺业绩的实现情况。",
+          "kind": "验证"
+        },
+        {
+          "title": "收入能否变成现金？",
+          "text": "关注新材料客户结构、应收账款、经营现金流和整合费用。",
+          "kind": "经营"
+        }
+      ],
+      "unknown": [
+        "本期未核验到交割完成公告、实际贷款条件和实际支付进度；不据 80% 对价推算未披露的交易估值。"
+      ],
+      "plain": "像一家化工厂买下另一家材料厂的大部分股份。钱先付给老股东，之后还要接手业务、管理客户、支付贷款成本；买下来和经营好是两道题。",
+      "source": {
+        "name": "上交所公司公告原文",
+        "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-11-21/600800_20261121_D17E.pdf"
+      },
+      "additionalSource": {
+        "name": "公司公告全文镜像（新浪财经）",
+        "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=10000749&gather=1&id=12717455"
+      },
+      "number": "01"
+    },
     {
       "id": "changyuandonggu-inquiry-delay-20261118",
       "category": "merger",
@@ -62,7 +133,7 @@
         "name": "上交所刊载的延期回复公告",
         "url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-11-18/603950_20261118_W49W.pdf"
       },
-      "number": "01"
+      "number": "02"
     },
     {
       "id": "shanghai-yahong-tender-20261117",
@@ -124,7 +195,7 @@
         "name": "上海亚虹要约收购报告书",
         "url": "https://static.cninfo.com.cn/finalpage/2026-11-17/1225673196.PDF"
       },
-      "number": "02"
+      "number": "03"
     },
     {
       "id": "sinotau-hk-offer-20261116",
@@ -181,7 +252,7 @@
         "name": "港交所刊载的先通医药招股章程及时间表",
         "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1116/2026111600012_c.pdf"
       },
-      "number": "03"
+      "number": "04"
     },
     {
       "id": "taboola-dianomi-effective-20261116",
@@ -247,7 +318,7 @@
         "name": "Taboola 发布的协议生效公告",
         "url": "https://investors.taboola.com/static-files/5f0abfdc-4c5a-41e6-b21c-6e3f87730c82"
       },
-      "number": "04"
+      "number": "05"
     },
     {
       "id": "icbc-capital-review-20261111",
@@ -303,7 +374,7 @@
         "name": "工商银行审核进展与原计划",
         "url": "https://www.thepaper.cn/newsDetail_forward_34453542"
       },
-      "number": "05"
+      "number": "06"
     },
     {
       "id": "loreal-pam2l-20261108",
@@ -358,7 +429,7 @@
         "name": "欧莱雅中国发布稿",
         "url": "https://www.prnasia.com/story/555303-1.shtml"
       },
-      "number": "06"
+      "number": "07"
     },
     {
       "id": "huaxin-csn-20261109",
@@ -413,7 +484,7 @@
         "name": "华新建材交易公告全文（公开转载）",
         "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12696326&stockid=600801"
       },
-      "number": "07"
+      "number": "08"
     },
     {
       "id": "sand-ai-a-plus-20261105",
@@ -421,7 +492,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-05",
-      "number": "08",
+      "number": "09",
       "title": "2亿美元之后：模型、算力与付费客户怎么接上？",
       "company": "Sand.ai · 视频生成模型",
       "amount": "2",
@@ -517,7 +588,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-03",
-      "number": "09",
+      "number": "10",
       "title": "5亿元C+轮之后，资金怎样走向产品价值？",
       "company": "暖芯迦 · 视觉脑机接口",
       "amount": "5",
@@ -593,7 +664,7 @@
       "type": "产业资本",
       "region": "中国",
       "date": "2026-10-30",
-      "number": "10",
+      "number": "11",
       "title": "50亿的投资计划，离真正投出去还有几步？",
       "company": "招商公路 × 人工智能产业基金",
       "amount": "50",
@@ -694,7 +765,7 @@
       "type": "创投融资",
       "region": "全球 · 美国",
       "date": "2026-10-29",
-      "number": "11",
+      "number": "12",
       "title": "都叫融资，这1亿美元其实分成两种钱。",
       "company": "Collective · 面向个体创业者的财务平台",
       "amount": "1",
@@ -785,7 +856,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-10-28",
-      "number": "12",
+      "number": "13",
       "title": "7亿元B轮之后，脑机接口还要闯哪些关？",
       "company": "脑虎科技 · 脑机接口",
       "amount": "7",
