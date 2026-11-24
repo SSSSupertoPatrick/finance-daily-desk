@@ -1,8 +1,80 @@
 {
-  "updated": "2026-11-23",
-  "note": "11 月 23 日核验：本期新增 1 则周末公告案例（公告日期 11 月 21 日），保留历史事件原日期。原文链接及全文镜像均已定位；交割进度未确认。",
-  "status": "本期新增 · 渤海化学现金收购协议",
+  "updated": "2026-11-24",
+  "note": "本期新增 1 则 11 月 23 日融资披露的报道核验；明确一手协议及到账凭证缺失。既有案例继续保留各自原公告日期。",
+  "status": "本期新增 · 昂拓生物 B 轮融资报道核验",
   "cases": [
+    {
+      "id": "angtuo-seriesb-reported-20261123",
+      "category": "funding",
+      "type": "创投融资 · B 轮（据公司消息报道）",
+      "region": "中国",
+      "date": "2026-11-23",
+      "title": "昂拓生物 B 轮：5,500 万美元走向临床验证",
+      "company": "昂拓生物",
+      "amount": "5,500",
+      "unit": "万美元",
+      "amountLabel": "对外宣布的本轮融资额；未披露估值",
+      "stage": "公司宣布完成（投资界转述）；一手交易文件待补充",
+      "color": "purple",
+      "intro": "投资界 11 月 23 日转述公司消息：完成 5,500 万美元 B 轮融资，资金主要用于核心管线的全球临床开发。已交叉核对另一家媒体报道，未取得投资协议或独立到账凭证。",
+      "facts": [
+        "报道列示弘晖基金、龙磐投资联合领投，多家机构及产业资本跟投，现有股东杏泽资本等继续支持。",
+        "行远致同担任牵头财务顾问，不能把财务顾问自动列为投资人。",
+        "披露的是公司宣布完成的 B 轮融资，不是药物获批、开始销售或已经盈利。"
+      ],
+      "parties": "融资方为昂拓生物；联合领投方为弘晖基金和龙磐投资；其余新投资方未完整列名。轮次为 B 轮，具体证券类型、优先权与清算安排未披露。",
+      "business": "分析：融资为临床研发提供时间与资金，但投资价值仍要由临床数据、安全性、开发进度和商业化条件验证。试验失败、延迟或成本上升，都可能使资金消耗快于计划。",
+      "flow": [
+        "按披露用途推进核心管线临床开发",
+        "按预设方案获得可解释的安全性及有效性数据",
+        "依法推进后续试验、注册及合作安排",
+        "再核对商业化收入、成本和实际现金回收"
+      ],
+      "moneyUse": [
+        "公开报道的主要用途为核心管线全球临床开发；各管线、试验阶段或地区的预算比例未披露。",
+        "不把 5,500 万美元按未经披露的比例分配，也不换算后与其他人民币融资混加。"
+      ],
+      "milestones": [
+        {
+          "name": "11 月 23 日对外融资完成消息",
+          "state": "媒体转述公司披露"
+        },
+        {
+          "name": "核心管线临床推进与数据披露",
+          "state": "待后续验证"
+        },
+        {
+          "name": "注册批准及销售收入",
+          "state": "不能由融资推定"
+        }
+      ],
+      "watch": [
+        {
+          "title": "资金能支持到哪个节点？",
+          "text": "关注新增一手公告、研发开支、现金储备及管线关键里程碑。",
+          "kind": "验证"
+        },
+        {
+          "title": "临床证据如何积累？",
+          "text": "以注册试验资料及正式结果为准，不用投资人的看好代替临床结论。",
+          "kind": "研发"
+        }
+      ],
+      "unknown": [
+        "融资估值、持股比例、完整跟投名单、资金分期与实际到账明细未披露。",
+        "尚未独立取得本轮一手交易文件；本页明确按媒体转述的公司声明记录，后续需补充原始公告。"
+      ],
+      "plain": "像拿到资金继续做一项复杂试验。资金让团队有机会把试验做完，结果是否成功、能否获批和卖出产品，还要一道一道验证。",
+      "source": {
+        "name": "投资界转述公司融资消息",
+        "url": "https://news.pedaily.cn/202611/572223.shtml"
+      },
+      "additionalSource": {
+        "name": "交叉核对：新时空",
+        "url": "https://www.newtimespace.com/zh-cn/tech/1463960.html"
+      },
+      "number": "01"
+    },
     {
       "id": "bohai-grui-agreement-20261121",
       "category": "merger",
@@ -72,7 +144,7 @@
         "name": "公司公告全文镜像（新浪财经）",
         "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=10000749&gather=1&id=12717455"
       },
-      "number": "01"
+      "number": "02"
     },
     {
       "id": "changyuandonggu-inquiry-delay-20261118",
@@ -133,7 +205,7 @@
         "name": "上交所刊载的延期回复公告",
         "url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-11-18/603950_20261118_W49W.pdf"
       },
-      "number": "02"
+      "number": "03"
     },
     {
       "id": "shanghai-yahong-tender-20261117",
@@ -195,7 +267,7 @@
         "name": "上海亚虹要约收购报告书",
         "url": "https://static.cninfo.com.cn/finalpage/2026-11-17/1225673196.PDF"
       },
-      "number": "03"
+      "number": "04"
     },
     {
       "id": "sinotau-hk-offer-20261116",
@@ -252,7 +324,7 @@
         "name": "港交所刊载的先通医药招股章程及时间表",
         "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1116/2026111600012_c.pdf"
       },
-      "number": "04"
+      "number": "05"
     },
     {
       "id": "taboola-dianomi-effective-20261116",
@@ -318,7 +390,7 @@
         "name": "Taboola 发布的协议生效公告",
         "url": "https://investors.taboola.com/static-files/5f0abfdc-4c5a-41e6-b21c-6e3f87730c82"
       },
-      "number": "05"
+      "number": "06"
     },
     {
       "id": "icbc-capital-review-20261111",
@@ -374,7 +446,7 @@
         "name": "工商银行审核进展与原计划",
         "url": "https://www.thepaper.cn/newsDetail_forward_34453542"
       },
-      "number": "06"
+      "number": "07"
     },
     {
       "id": "loreal-pam2l-20261108",
@@ -429,7 +501,7 @@
         "name": "欧莱雅中国发布稿",
         "url": "https://www.prnasia.com/story/555303-1.shtml"
       },
-      "number": "07"
+      "number": "08"
     },
     {
       "id": "huaxin-csn-20261109",
@@ -484,7 +556,7 @@
         "name": "华新建材交易公告全文（公开转载）",
         "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12696326&stockid=600801"
       },
-      "number": "08"
+      "number": "09"
     },
     {
       "id": "sand-ai-a-plus-20261105",
@@ -492,7 +564,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-05",
-      "number": "09",
+      "number": "10",
       "title": "2亿美元之后：模型、算力与付费客户怎么接上？",
       "company": "Sand.ai · 视频生成模型",
       "amount": "2",
@@ -588,7 +660,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-03",
-      "number": "10",
+      "number": "11",
       "title": "5亿元C+轮之后，资金怎样走向产品价值？",
       "company": "暖芯迦 · 视觉脑机接口",
       "amount": "5",
@@ -664,7 +736,7 @@
       "type": "产业资本",
       "region": "中国",
       "date": "2026-10-30",
-      "number": "11",
+      "number": "12",
       "title": "50亿的投资计划，离真正投出去还有几步？",
       "company": "招商公路 × 人工智能产业基金",
       "amount": "50",
@@ -765,7 +837,7 @@
       "type": "创投融资",
       "region": "全球 · 美国",
       "date": "2026-10-29",
-      "number": "12",
+      "number": "13",
       "title": "都叫融资，这1亿美元其实分成两种钱。",
       "company": "Collective · 面向个体创业者的财务平台",
       "amount": "1",
@@ -856,7 +928,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-10-28",
-      "number": "13",
+      "number": "14",
       "title": "7亿元B轮之后，脑机接口还要闯哪些关？",
       "company": "脑虎科技 · 脑机接口",
       "amount": "7",
