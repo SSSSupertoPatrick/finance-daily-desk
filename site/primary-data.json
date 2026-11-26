@@ -1,8 +1,83 @@
 {
-  "updated": "2026-11-24",
-  "note": "本期新增 1 则 11 月 23 日融资披露的报道核验；明确一手协议及到账凭证缺失。既有案例继续保留各自原公告日期。",
-  "status": "本期新增 · 昂拓生物 B 轮融资报道核验",
+  "updated": "2026-11-26",
+  "note": "本期新增九天创智 11 月 25 日融资消息，按投资界转述的公司声明记录；尚未取得一手投资协议或到账证明。其余为历史案例，不当作今天的新交易；本期未核验到足够可靠的新并购或 IPO 进展。",
+  "status": "今日新增 1 则融资核验｜保留既往案例原日期",
   "cases": [
+    {
+      "id": "jiutian-seriesa-20261125",
+      "category": "funding",
+      "type": "创投融资 · A轮",
+      "region": "中国 · 深圳",
+      "date": "2026-11-25",
+      "title": "九天创智近亿元A轮：清扫机器人如何走向规模交付？",
+      "company": "九天创智（深圳）科技有限公司",
+      "amount": "近1",
+      "unit": "亿元人民币",
+      "amountLabel": "公司对外宣布的融资规模；非精确到账额",
+      "stage": "宣布完成A轮（投资界转述）",
+      "color": "yellow",
+      "intro": "11月25日，投资界报道公司宣布完成近亿元A轮，投资方为亿道资本、清科产投、南山战新投。已交叉核对创投资料库；尚未取得独立的一手交易文件。",
+      "facts": [
+        "披露轮次为A轮、金额为近亿元人民币，不改写成整整1亿元，也不推算估值。",
+        "公司业务面向大面积室外清洁等机器人场景；产品技术与落地范围来自公司披露，未作为独立审计的经营数据。",
+        "用途包括研发、产品迭代、市场拓展与供应链建设；未披露每项预算占比。"
+      ],
+      "parties": "融资方：九天创智；投资方：亿道资本、清科产投、南山战新投。报道未明确领投顺序，具体认购工具、各方出资比例及股东权利未披露。",
+      "business": "分析：客户是否愿意续购，要看机器人在真实场景的作业效率、可靠性和全周期成本。融资可以扩充研发与交付能力，但技术演示还需经过付费部署、维护和回款的检验。",
+      "flow": [
+        "研发提高识别、导航和安全能力",
+        "在客户现场验证有效作业时长与清洁质量",
+        "产品标准化与供应链支持批量交付",
+        "售后服务与稳定履约影响复购及回款"
+      ],
+      "moneyUse": [
+        "具身智能大模型与室外通用机器人平台研发",
+        "场景产品迭代及全球市场拓展",
+        "供应链与智能制造能力；各用途金额未披露"
+      ],
+      "milestones": [
+        {
+          "name": "11月25日宣布本轮完成",
+          "state": "媒体转述公司声明"
+        },
+        {
+          "name": "资金交割与股权变更明细",
+          "state": "未独立核验"
+        },
+        {
+          "name": "规模部署与持续盈利",
+          "state": "待经营数据验证"
+        }
+      ],
+      "watch": [
+        {
+          "title": "客户买回去是否划算？",
+          "text": "比较有效作业面积、故障停机、人工接管、能耗与维保成本，避免只看演示速度。",
+          "kind": "经营"
+        },
+        {
+          "title": "交付能否变成现金？",
+          "text": "核对付费订单、验收条款、应收回款和复购；不能把试点数直接换算为收入。",
+          "kind": "验证"
+        },
+        {
+          "title": "扩张能否复制？",
+          "text": "观察不同气候、路况及海外合规条件下的服务能力。",
+          "kind": "边界"
+        }
+      ],
+      "unknown": [
+        "精确金额、估值、出资比例、工具性质、分期交割及实际到账明细未披露。",
+        "未取得投资机构或公司的独立原始交易公告；使用媒体转述并明确证据层级。",
+        "客户收入、订单利润、单机回本期和现金消耗未披露，不用融资额倒推盈利能力。"
+      ],
+      "plain": "像给清洁团队添置更聪明的工具。钱让团队有条件改进和多交付，但客户最终要算：扫得干不干净、坏了谁修、长期费用省不省。",
+      "source": {
+        "name": "投资界首发：转述公司声明及资金用途",
+        "url": "https://news.pedaily.cn/202611/572348.shtml"
+      },
+      "number": "01"
+    },
     {
       "id": "angtuo-seriesb-reported-20261123",
       "category": "funding",
@@ -73,7 +148,7 @@
         "name": "交叉核对：新时空",
         "url": "https://www.newtimespace.com/zh-cn/tech/1463960.html"
       },
-      "number": "01"
+      "number": "02"
     },
     {
       "id": "bohai-grui-agreement-20261121",
@@ -144,7 +219,7 @@
         "name": "公司公告全文镜像（新浪财经）",
         "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=10000749&gather=1&id=12717455"
       },
-      "number": "02"
+      "number": "03"
     },
     {
       "id": "changyuandonggu-inquiry-delay-20261118",
@@ -205,7 +280,7 @@
         "name": "上交所刊载的延期回复公告",
         "url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-11-18/603950_20261118_W49W.pdf"
       },
-      "number": "03"
+      "number": "04"
     },
     {
       "id": "shanghai-yahong-tender-20261117",
@@ -267,7 +342,7 @@
         "name": "上海亚虹要约收购报告书",
         "url": "https://static.cninfo.com.cn/finalpage/2026-11-17/1225673196.PDF"
       },
-      "number": "04"
+      "number": "05"
     },
     {
       "id": "sinotau-hk-offer-20261116",
@@ -324,7 +399,7 @@
         "name": "港交所刊载的先通医药招股章程及时间表",
         "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1116/2026111600012_c.pdf"
       },
-      "number": "05"
+      "number": "06"
     },
     {
       "id": "taboola-dianomi-effective-20261116",
@@ -390,7 +465,7 @@
         "name": "Taboola 发布的协议生效公告",
         "url": "https://investors.taboola.com/static-files/5f0abfdc-4c5a-41e6-b21c-6e3f87730c82"
       },
-      "number": "06"
+      "number": "07"
     },
     {
       "id": "icbc-capital-review-20261111",
@@ -446,7 +521,7 @@
         "name": "工商银行审核进展与原计划",
         "url": "https://www.thepaper.cn/newsDetail_forward_34453542"
       },
-      "number": "07"
+      "number": "08"
     },
     {
       "id": "loreal-pam2l-20261108",
@@ -501,7 +576,7 @@
         "name": "欧莱雅中国发布稿",
         "url": "https://www.prnasia.com/story/555303-1.shtml"
       },
-      "number": "08"
+      "number": "09"
     },
     {
       "id": "huaxin-csn-20261109",
@@ -556,7 +631,7 @@
         "name": "华新建材交易公告全文（公开转载）",
         "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12696326&stockid=600801"
       },
-      "number": "09"
+      "number": "10"
     },
     {
       "id": "sand-ai-a-plus-20261105",
@@ -564,7 +639,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-05",
-      "number": "10",
+      "number": "11",
       "title": "2亿美元之后：模型、算力与付费客户怎么接上？",
       "company": "Sand.ai · 视频生成模型",
       "amount": "2",
@@ -660,7 +735,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-11-03",
-      "number": "11",
+      "number": "12",
       "title": "5亿元C+轮之后，资金怎样走向产品价值？",
       "company": "暖芯迦 · 视觉脑机接口",
       "amount": "5",
@@ -736,7 +811,7 @@
       "type": "产业资本",
       "region": "中国",
       "date": "2026-10-30",
-      "number": "12",
+      "number": "13",
       "title": "50亿的投资计划，离真正投出去还有几步？",
       "company": "招商公路 × 人工智能产业基金",
       "amount": "50",
@@ -837,7 +912,7 @@
       "type": "创投融资",
       "region": "全球 · 美国",
       "date": "2026-10-29",
-      "number": "13",
+      "number": "14",
       "title": "都叫融资，这1亿美元其实分成两种钱。",
       "company": "Collective · 面向个体创业者的财务平台",
       "amount": "1",
@@ -928,7 +1003,7 @@
       "type": "创投融资",
       "region": "中国",
       "date": "2026-10-28",
-      "number": "14",
+      "number": "15",
       "title": "7亿元B轮之后，脑机接口还要闯哪些关？",
       "company": "脑虎科技 · 脑机接口",
       "amount": "7",
